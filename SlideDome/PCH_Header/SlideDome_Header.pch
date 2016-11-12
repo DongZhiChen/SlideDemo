@@ -1,0 +1,15 @@
+//
+//  SlideDome_Header.pch
+//  SlideDome
+//
+//  Created by ceing on 16/11/4.
+//  Copyright © 2016年 tcm. All rights reserved.
+//
+
+#ifndef SlideDome_Header_pch
+#define SlideDome_Header_pch
+
+#import <BlocksKit/BlocksKit+UIKit.h>
+#import "Tools.h"
+
+#endif /* SlideDome_Header_pch */
