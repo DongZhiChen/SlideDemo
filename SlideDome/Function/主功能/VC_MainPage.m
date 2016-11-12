@@ -174,10 +174,6 @@ static NSString *CellPreviewID = @"CellPhotoPreview";
 
 #pragma mark -
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 
@@ -193,8 +189,65 @@ static NSString *CellPreviewID = @"CellPhotoPreview";
     
 }
 
--(void)setMuiscType:(muiscType)muiscType{
 
+
+//-(void)test{
+//    
+//    NSString *fileNameOut2 = @"output.mp4";
+//    _videoPath = [NSString stringWithFormat:@"%@%@", NSTemporaryDirectory(), fileNameOut2];
+//    NSLog(@"%@",_videoPath);
+//    [[NSFileManager defaultManager] removeItemAtPath:_videoPath  error:NULL];
+//    
+//    
+//    _videoBuilder = [[VideoBuilder alloc]initWithOutputSize:CGSizeMake(640, 360) Timescale:1 OutputPath:_videoPath];
+//    
+//    NSMutableArray *arrayImages = [NSMutableArray new];
+//    
+//    for(int i = 0; i < arrayPhotos.count; i++){
+//        
+//            PHAsset *asset = arrayPhotos[i];
+//            
+//            PHImageRequestOptions *option = [[PHImageRequestOptions alloc] init];
+//            option.synchronous = YES;
+//            option.resizeMode = PHImageRequestOptionsResizeModeExact;
+//            option.deliveryMode = PHImageRequestOptionsDeliveryModeHighQualityFormat;
+//            
+//            [[PHCachingImageManager defaultManager] requestImageForAsset:asset targetSize:CGSizeMake(640, 360) contentMode:PHImageContentModeAspectFill options:option resultHandler:^(UIImage * _Nullable image, NSDictionary * _Nullable info) {
+//                
+//                [arrayImages addObject:image];
+//                
+//            }];
+//    }
+//    
+//    [_videoBuilder convertVideoWithImageArray:arrayImages];
+//    [_videoBuilder maskFinishWithSuccess:^{
+//        
+//        //[_videoBuilder addAudioToVideoAudioPath:muiscPath];
+//        
+//    } Fail:^(NSError *error) {
+//    }];
+//    
+//}
+
+
+
+- (IBAction)BTN_Muisc:(id)sender {
+    
+    VC_MuiscList *muiscList = [[VC_MuiscList alloc] init];
+    [self.navigationController pushViewController:muiscList animated:YES];
+    
+}
+
+- (IBAction)BTN_Preview:(id)sender {
+    
+    
+}
+
+
+#pragma mark - SETTER,GETTER -
+
+-(void)setMuiscType:(muiscType)muiscType{
+    
     _muiscType = muiscType;
     switch (muiscType) {
         case muiscTypeHappy:{
@@ -223,57 +276,12 @@ static NSString *CellPreviewID = @"CellPhotoPreview";
 }
 
 
--(void)test{
-    
-    NSString *fileNameOut2 = @"output.mp4";
-    _videoPath = [NSString stringWithFormat:@"%@%@", NSTemporaryDirectory(), fileNameOut2];
-    NSLog(@"%@",_videoPath);
-    [[NSFileManager defaultManager] removeItemAtPath:_videoPath  error:NULL];
-    
-    
-    _videoBuilder = [[VideoBuilder alloc]initWithOutputSize:CGSizeMake(640, 360) Timescale:1 OutputPath:_videoPath];
-    
-    NSMutableArray *arrayImages = [NSMutableArray new];
-    
-    for(int i = 0; i < arrayPhotos.count; i++){
-        
-            PHAsset *asset = arrayPhotos[i];
-            
-            PHImageRequestOptions *option = [[PHImageRequestOptions alloc] init];
-            option.synchronous = YES;
-            option.resizeMode = PHImageRequestOptionsResizeModeExact;
-            option.deliveryMode = PHImageRequestOptionsDeliveryModeHighQualityFormat;
-            
-            [[PHCachingImageManager defaultManager] requestImageForAsset:asset targetSize:CGSizeMake(640, 360) contentMode:PHImageContentModeAspectFill options:option resultHandler:^(UIImage * _Nullable image, NSDictionary * _Nullable info) {
-                
-                [arrayImages addObject:image];
-                
-            }];
-    }
-    
-    [_videoBuilder convertVideoWithImageArray:arrayImages];
-    [_videoBuilder maskFinishWithSuccess:^{
-        
-        //[_videoBuilder addAudioToVideoAudioPath:muiscPath];
-        
-    } Fail:^(NSError *error) {
-    }];
-    
+
+#pragma mark - 
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
-
-
-
-- (IBAction)BTN_Muisc:(id)sender {
-    
-    VC_MuiscList *muiscList = [[VC_MuiscList alloc] init];
-    [self.navigationController pushViewController:muiscList animated:YES];
-    
-}
-
-- (IBAction)BTN_Preview:(id)sender {
-    
-    
-}
-
 
 @end
