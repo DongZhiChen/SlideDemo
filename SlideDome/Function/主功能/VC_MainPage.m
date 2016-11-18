@@ -155,6 +155,7 @@ static NSString *CellPreviewID = @"CellPhotoPreview";
 
 
 
+
 #pragma mark - UIButtonEventClick -
 
 - (IBAction)BTN_Type:(UIButton *)sender {
@@ -172,8 +173,6 @@ static NSString *CellPreviewID = @"CellPhotoPreview";
     sender.selected = YES;
     
 }
-
-
 
 
 
@@ -274,12 +273,12 @@ static NSString *CellPreviewID = @"CellPhotoPreview";
     }
 }
 
-#pragma mark -
 
+
+#pragma mark - 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 @end
