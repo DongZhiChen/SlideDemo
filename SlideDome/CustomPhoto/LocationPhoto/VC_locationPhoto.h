@@ -14,10 +14,6 @@
 #import <Photos/PHCollection.h>
 #import <Photos/PHImageManager.h>
 
-
-#import "UIImage+Convert.h"
-#import "VideoBuilder.h"
-#import "UIViewController+DismissRoot.h"
 @interface VC_locationPhoto : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>{
 
   

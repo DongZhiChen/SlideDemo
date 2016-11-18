@@ -1,14 +1,14 @@
 //
-//  VC_Main.m
+//  VC_MakeVideo.m
 //  SlideDome
 //
 //  Created by ceing on 16/11/8.
 //  Copyright © 2016年 tcm. All rights reserved.
 //
 
-#import "VC_Main.h"
+#import "VC_MakeVideo.h"
 
-@interface VC_Main (){
+@interface VC_MakeVideo (){
 
     PHImageRequestOptions *option;
    ;
@@ -22,8 +22,8 @@
     NSArray *arrayEffect;
     NSArray *arrayFiler;
     
+    
 }
-
 
 @property VideoBuilder *videoBuilder;
 @property NSString *videoPath;
@@ -32,15 +32,16 @@
 @end
 static NSString *CellPreviewID = @"CellPhotoPreview";
 
-@implementation VC_Main
+@implementation VC_MakeVideo
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-
-    [self initData];
+  self.automaticallyAdjustsScrollViewInsets = NO;
     
+    [self initData];
+    [self initView];
     
 }
 
@@ -57,42 +58,21 @@ static NSString *CellPreviewID = @"CellPhotoPreview";
         _IV_Image.image = result;
         
     }];
-}
--(void)viewWillLayoutSubviews{
-
-    if(self.automaticallyAdjustsScrollViewInsets == YES){
-    
-        [self initView];
-        
-    }
-
     
 }
+
+
 
 -(void)initView{
     
-    self.title = @"制作视频";
-    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.title = @"Make Video";
+  
     self.CV_PhotoList.delegate = self;
     self.CV_PhotoList.dataSource = self;
     self.CV_PhotoList.alwaysBounceHorizontal = YES;
     [self.CV_PhotoList registerNib:[UINib nibWithNibName:@"CellPhotoPreview" bundle:nil] forCellWithReuseIdentifier:CellPreviewID];
     
-    AVAudioSession *session = [AVAudioSession sharedInstance];
-    [session setCategory:AVAudioSessionCategoryPlayback
-             withOptions:AVAudioSessionCategoryOptionMixWithOthers
-                   error:nil];
-    
-    V_RollingTab *rollingTab = [[V_RollingTab alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.IV_Image.frame), MainBoundsSize.width, 35)];
-    rollingTab.delegate = self;
-    rollingTab.arrayTitles = arrayEffect;
-    rollingTab.isCanRoll = YES;
-    rollingTab.isAddIndexLine = YES;
-    rollingTab.tabTitleSize = CGSizeMake(80, 35);
-    [self.view addSubview:rollingTab];
-    
 }
-
 
 
 -(void)initData{
@@ -100,37 +80,11 @@ static NSString *CellPreviewID = @"CellPhotoPreview";
     option = [[PHImageRequestOptions alloc] init];
     option.synchronous = YES;
     option.resizeMode = PHImageRequestOptionsResizeModeNone;
-    //@"浮雕效果" @"素描" @"收缩失真"
-    arrayEffect = @[@"默认",@"怀旧",@"素描",@"模糊",@"腐烂效果",@"素描",@"鱼眼",@"收缩失真",@"伸展失真",@"水晶球效果",@"水晶球倒影效果",@"浮雕效果"];
-    arrayFiler = @[@"GPUImageSharpenFilter",@"GPUImageSepiaFilter",@"GPUImageSketchFilter",@"GPUImageGaussianBlurFilter",@"GPUImageErosionFilter",@"GPUImageThresholdSketchFilter",@"GPUImageBulgeDistortionFilter",@"GPUImagePinchDistortionFilter",@"GPUImageStretchDistortionFilter",@"GPUImageGlassSphereFilter",@"GPUImageSphereRefractionFilter",@"GPUImageEmbossFilter"];
-                   
-//                   @{@"naem":@"GPUImageSepiaFilter",@"title":@"怀旧"},
-//                   @{@"name":@"GPUImageSketchFilter",@"title":@"素描"},
-//                   @{@"name":@"GPUImageSharpenFilter",@"title":@"锐化"},
-//                   @{@"name":@"GPUImageColorPackingFilter",@"title":@"X光照"},
-//                   @{@"name":@"GPUImageGaussianBlurFilter",@"title":@"高斯模糊"},
-//                   @{@"name":@"GPUImageErosionFilter",@"title":@"腐烂效果"},
-//                   @{@"name":@"GPUImageThresholdSketchFilter",@"title":@"素描"},
-//                   @{@"name":@"GPUImageTiltShiftFilter",@"title":@"条纹模糊"},
-//                   @{@"name":@"GPUImageBulgeDistortionFilter",@"title":@"中间凸起"},
-//                   @{@"name":@"GPUImageToonFilter",@"title":@"卡通效果"},
-//                   @{@"name":@"GPUImageSmoothToonFilter",@"title":@"1"},
-//                   @{@"name":@"GPUImagePosterizeFilter",@"title":@"色调分离"},
-//                   @{@"name":@"GPUImageCrosshatchFilter",@"title":@"网格"},
-//                   @{@"name":@"GPUImagePixellateFilter",@"title":@"马赛克"},
-//                   @{@"name":@"GPUImageVignetteFilter",@"title":@"黑色阴影"},
-//                   @{@"name":@"GPUImagePinchDistortionFilter",@"title":@"收缩失真，拉远"},
-//                   @{@"name":@"GPUImageStretchDistortionFilter",@"title":@"伸展失真"},
-//                   @{@"name":@"GPUImageGlassSphereFilter",@"title":@"水晶球效果"},
-//                   @{@"name":@"GPUImageSphereRefractionFilter",@"title":@"圆倒立"},
-//                   @{@"name":@"GPUImagePerlinNoiseFilter",@"title":@"1"},
-//                   @{@"name":@"GPUImageEmbossFilter",@"title":@"浮雕效果"}
-//                   ];
-//
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(chooseMuisc:) name:@"chooseMuisc" object:nil];
+      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(chooseMuisc:) name:@"chooseMuisc" object:nil];
     
 
 }
+
 
 -(void)chooseMuisc:(NSNotification *)notiy{
 
@@ -198,7 +152,11 @@ static NSString *CellPreviewID = @"CellPhotoPreview";
     PHAsset *sset = _arrayPhotos[indexPath.row];
     [[PHCachingImageManager defaultManager] requestImageForAsset:sset targetSize:_IV_Image.frame.size contentMode:PHImageContentModeAspectFill options:option resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
         
-        _IV_Image.image = result;
+       // _IV_Image.image = result;
+        
+        VC_EditPhoto *editPhoto = [[VC_EditPhoto alloc] init];
+        editPhoto.image = result;
+        [self.navigationController pushViewController:editPhoto animated:YES];
         
     }];
 
@@ -246,6 +204,7 @@ static NSString *CellPreviewID = @"CellPhotoPreview";
         [_videoBuilder addAudioToVideoAudioPath:_strMusicPath addSaveVideoBlock:^(NSURL *savePath){}];
         
     } Fail:^(NSError *error) {
+    
         
     }];
     
@@ -280,6 +239,9 @@ static NSString *CellPreviewID = @"CellPhotoPreview";
 
 - (IBAction)BTN_Play:(UIButton *)sender {
     
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+  
     __weak typeof(self) weakSelf = self;
     
     NSString *fileNameOut2 = @"output.mp4";
@@ -309,38 +271,12 @@ static NSString *CellPreviewID = @"CellPhotoPreview";
         
            dispatch_async(dispatch_get_main_queue(), ^{
                
-            if(viewContent == nil){
-            
-                viewContent = [[UIView alloc] initWithFrame:self.view.bounds];
-                
-                UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:weakSelf action:@selector(videoStop)];
-                [viewContent addGestureRecognizer:tap];
-                
-                
-                item = [AVPlayerItem playerItemWithURL:savePath];
-                [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(itemDidFinishPlaying:) name:AVPlayerItemDidPlayToEndTimeNotification object:item];
+               [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
 
-                player = [AVPlayer playerWithPlayerItem:item];
-                player.volume = 0.5;
-                playerLayer = [AVPlayerLayer playerLayerWithPlayer:player];
-                playerLayer.videoGravity = AVLayerVideoGravityResizeAspect;
-                
-                playerLayer.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1].CGColor;
-                playerLayer.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
-                [viewContent.layer addSublayer:playerLayer];
-                
-//                
-//                Btn_Replay = [UIButton buttonWithType:UIButtonTypeCustom];
-//                Btn_Replay.hidden = YES;
-//                Btn_Replay.frame = CGRectMake(0, 0, 80, 80);
-//                Btn_Replay.center = viewContent.center;
-//                [Btn_Replay setTitle:@"重播" forState:0];
-//                [Btn_Replay addTarget:self action:@selector(BTN_Play:) forControlEvents:UIControlEventTouchUpInside];
-//                [viewContent addSubview:Btn_Replay];
-            }
-            
-            [player play];
-            [weakSelf.view addSubview:viewContent];
+               VC_VideoPlayer *palyer = [[VC_VideoPlayer alloc] init];
+               palyer.videoPath = savePath;
+               [weakSelf.navigationController pushViewController:palyer animated:YES];
+
                });
         }];
         
@@ -367,6 +303,7 @@ static NSString *CellPreviewID = @"CellPhotoPreview";
 
 - (IBAction)BTN_Preview:(id)sender {
     
+     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     __weak typeof(self) weakSelf = self;
     
@@ -406,6 +343,9 @@ static NSString *CellPreviewID = @"CellPhotoPreview";
                     if(success){
                         dispatch_async(dispatch_get_main_queue(), ^{
                         
+                            [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+
+                            
                             UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"Video files have been deposited in the album" preferredStyle:UIAlertControllerStyleAlert];
                             
                             UIAlertAction *action = [UIAlertAction actionWithTitle:@"I Know" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {

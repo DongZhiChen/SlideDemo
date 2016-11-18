@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VC_Main">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VC_MakeVideo">
             <connections>
                 <outlet property="CV_PhotoList" destination="KaD-UD-CMu" id="DJM-Dn-Xkh"/>
                 <outlet property="IV_Image" destination="5ql-ID-VdF" id="ecb-CT-Fhz"/>
@@ -33,19 +32,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VxK-Pk-Kcu">
                     <rect key="frame" x="4" y="448" width="313" height="50"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6UB-s0-yMB">
-                            <rect key="frame" x="159" y="13" width="80" height="30"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <state key="normal" title="P"/>
-                            <state key="selected" title="暂停">
-                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </state>
-                            <connections>
-                                <action selector="BTN_Play:" destination="-1" eventType="touchUpInside" id="KHX-z2-CCs"/>
-                            </connections>
-                        </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luM-gH-1mC">
-                            <rect key="frame" x="0.0" y="10" width="80" height="30"/>
+                            <rect key="frame" x="18" y="10" width="80" height="30"/>
                             <state key="normal" title="M">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -54,7 +42,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XhZ-og-YgW">
-                            <rect key="frame" x="242" y="13" width="77" height="30"/>
+                            <rect key="frame" x="214" y="13" width="77" height="30"/>
                             <state key="normal" title="S">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -62,13 +50,15 @@
                                 <action selector="BTN_Preview:" destination="-1" eventType="touchUpInside" id="PFU-oI-0SA"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a38-tl-qQZ">
-                            <rect key="frame" x="80" y="10" width="80" height="30"/>
-                            <state key="normal" title="B">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6UB-s0-yMB">
+                            <rect key="frame" x="116" y="13" width="80" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="P"/>
+                            <state key="selected" title="暂停">
+                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <connections>
-                                <action selector="BTN_Back:" destination="-1" eventType="touchUpInside" id="CY7-WE-ci7"/>
+                                <action selector="BTN_Play:" destination="-1" eventType="touchUpInside" id="KHX-z2-CCs"/>
                             </connections>
                         </button>
                     </subviews>
@@ -97,5 +87,16 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <point key="canvasLocation" x="529" y="258"/>
         </view>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="a38-tl-qQZ">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <state key="normal" title="B">
+                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            </state>
+            <connections>
+                <action selector="BTN_Back:" destination="-1" eventType="touchUpInside" id="CY7-WE-ci7"/>
+            </connections>
+            <point key="canvasLocation" x="193" y="416"/>
+        </button>
     </objects>
 </document>

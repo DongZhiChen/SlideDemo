@@ -15,9 +15,6 @@
     NSMutableArray *arrayImageState;
     
 }
-@property VideoBuilder *videoBuilder;
-@property NSString *videoPath;
-@property NSTimer *timer;
 
 @end
 
@@ -28,6 +25,8 @@ static NSString *cellID = @"CellLocationPhoto";
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.title = @"Photo";
+    
     [self initData];
     
     self.CV_photoList.delegate=self;
@@ -85,6 +84,7 @@ static NSString *cellID = @"CellLocationPhoto";
     return cell;
 }
 
+
 #pragma mark - UICollectionViewDelegate -
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -108,62 +108,7 @@ static NSString *cellID = @"CellLocationPhoto";
 }
 
 
-#pragma mark - setter,getter -
-
--(void)setImageGroup:(PHAssetCollection *)imageGroup{
-    
-    arrayPHAsset = [NSMutableArray new];
-    
-    PHFetchResult *result = [PHAsset fetchAssetsInAssetCollection:imageGroup options:nil];
-    for(PHAsset *phasset in result){
-        
-        [arrayPHAsset addObject:phasset];
-        
-    }
-}
-
-
-#pragma mark -
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
-static int count = 0;
-- (void)addImage {
-    
-    if (count < 3) {
-        
-        NSString *name = [NSString stringWithFormat:@"IMG_%d.jpg",count];
-        UIImage *image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:name ofType:nil]];
-        
-        if(image) {
-            
-            UIImage *clipImage = [UIImage imageClipWithImage:image];
-            NSData *clipCompressData = UIImageJPEGRepresentation(clipImage, 0.0f);
-            UIImage *clipCompressImage = [UIImage imageWithData:clipCompressData];
-            
-            if ([_videoBuilder addVideoFrameWithImage:clipCompressImage]) {
-                count ++;
-            }
-        }
-        
-    } else {
-        
-        [_timer invalidate];
-        [_videoBuilder maskFinishWithSuccess:^{
-            
-            //[_videoBuilder addAudioToVideoAudioPath:[[NSBundle mainBundle] pathForResource:@"audio" ofType:@"mp3"]];
-            
-        } Fail:^(NSError *error) {
-        }];
-        
-    }
-    
-}
-
+#pragma mark - UIButtonEventClick -
 
 - (IBAction)BTN_OK:(id)sender {
     
@@ -184,11 +129,34 @@ static int count = 0;
     
     if(arrayImages.count > 0){
     
+        
+    [self.navigationController popToRootViewControllerAnimated:NO];
+        
     [[NSNotificationCenter defaultCenter] postNotificationName:@"observerSelectedPhoto" object:arrayImages];
     }
+}
+
+
+#pragma mark - setter,getter -
+
+-(void)setImageGroup:(PHAssetCollection *)imageGroup{
     
-    [self dismissToRootController];
+    arrayPHAsset = [NSMutableArray new];
     
+    PHFetchResult *result = [PHAsset fetchAssetsInAssetCollection:imageGroup options:nil];
+    for(PHAsset *phasset in result){
+        
+        [arrayPHAsset addObject:phasset];
+        
+    }
+}
+
+
+#pragma mark -
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 @end

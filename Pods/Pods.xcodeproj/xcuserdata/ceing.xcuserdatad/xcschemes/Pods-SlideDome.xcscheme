@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '33593F05BD00F1DFEAD3ACE5FECF0A52'
+               BlueprintIdentifier = '44969E3952B1B35C256BDAF6D76CE047'
                BlueprintName = 'Pods-SlideDome'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-SlideDome.a'>

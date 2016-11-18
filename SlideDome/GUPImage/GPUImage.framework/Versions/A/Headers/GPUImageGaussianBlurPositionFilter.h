@@ -20,7 +20,7 @@
 
 /** Radius for the blur, defaults to 1.0
  */
-///模糊半径，（圆形模糊）（0~1）
+///模糊半径，（圆形模糊）
 @property (readwrite, nonatomic) CGFloat blurRadius;
 
 @end

@@ -40,5 +40,7 @@
 
 @property (nonatomic,assign) CGSize tabTitleSize;
 
+@property (assign, nonatomic) BOOL canShowSelectedState;
+
 @end
 

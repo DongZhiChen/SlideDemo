@@ -11,7 +11,7 @@
 #import "VC_PhotoGroup.h"
 #import "CellPhotoPreview.h"
 #import "VC_MuiscList.h"
-#import "VC_Main.h"
+#import "VC_MakeVideo.h"
 
 typedef NS_ENUM(NSInteger,muiscType) {
 

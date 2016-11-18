@@ -7,17 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		440C36B91DDB010F008B4AF2 /* V_AdjustRGB.m in Sources */ = {isa = PBXBuildFile; fileRef = 440C36A31DDB010F008B4AF2 /* V_AdjustRGB.m */; };
+		440C36BA1DDB010F008B4AF2 /* V_AdjustRGB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 440C36A41DDB010F008B4AF2 /* V_AdjustRGB.xib */; };
+		440C36BB1DDB010F008B4AF2 /* V_AdjustBrightness.m in Sources */ = {isa = PBXBuildFile; fileRef = 440C36A71DDB010F008B4AF2 /* V_AdjustBrightness.m */; };
+		440C36BC1DDB010F008B4AF2 /* V_AdjustBrightness.xib in Resources */ = {isa = PBXBuildFile; fileRef = 440C36A81DDB010F008B4AF2 /* V_AdjustBrightness.xib */; };
+		440C36BD1DDB010F008B4AF2 /* V_AdjustContrast.m in Sources */ = {isa = PBXBuildFile; fileRef = 440C36AB1DDB010F008B4AF2 /* V_AdjustContrast.m */; };
+		440C36BE1DDB010F008B4AF2 /* V_AdjustContrast.xib in Resources */ = {isa = PBXBuildFile; fileRef = 440C36AC1DDB010F008B4AF2 /* V_AdjustContrast.xib */; };
+		440C36BF1DDB010F008B4AF2 /* V_AdjustExposure.m in Sources */ = {isa = PBXBuildFile; fileRef = 440C36AF1DDB010F008B4AF2 /* V_AdjustExposure.m */; };
+		440C36C01DDB010F008B4AF2 /* V_AdjustExposure.xib in Resources */ = {isa = PBXBuildFile; fileRef = 440C36B01DDB010F008B4AF2 /* V_AdjustExposure.xib */; };
+		440C36C11DDB010F008B4AF2 /* V_AdjustWhiteBalance.m in Sources */ = {isa = PBXBuildFile; fileRef = 440C36B31DDB010F008B4AF2 /* V_AdjustWhiteBalance.m */; };
+		440C36C21DDB010F008B4AF2 /* V_AdjustWhiteBalance.xib in Resources */ = {isa = PBXBuildFile; fileRef = 440C36B41DDB010F008B4AF2 /* V_AdjustWhiteBalance.xib */; };
+		440C36C31DDB010F008B4AF2 /* V_AdjustSaturation.m in Sources */ = {isa = PBXBuildFile; fileRef = 440C36B71DDB010F008B4AF2 /* V_AdjustSaturation.m */; };
+		440C36C41DDB010F008B4AF2 /* V_AdjustSaturation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 440C36B81DDB010F008B4AF2 /* V_AdjustSaturation.xib */; };
+		440C36DB1DDB057D008B4AF2 /* V_AdjustFilterEmboss.m in Sources */ = {isa = PBXBuildFile; fileRef = 440C36D51DDB057D008B4AF2 /* V_AdjustFilterEmboss.m */; };
+		440C36DC1DDB057D008B4AF2 /* V_AdjustFilterEmboss.xib in Resources */ = {isa = PBXBuildFile; fileRef = 440C36D61DDB057D008B4AF2 /* V_AdjustFilterEmboss.xib */; };
+		440C36DD1DDB057D008B4AF2 /* V_AdjustFilterSharpen.m in Sources */ = {isa = PBXBuildFile; fileRef = 440C36D91DDB057D008B4AF2 /* V_AdjustFilterSharpen.m */; };
+		440C36DE1DDB057D008B4AF2 /* V_AdjustFilterSharpen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 440C36DA1DDB057D008B4AF2 /* V_AdjustFilterSharpen.xib */; };
+		440C36E21DDB1432008B4AF2 /* V_AdjustFilterBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 440C36E11DDB1432008B4AF2 /* V_AdjustFilterBlur.m */; };
+		440C36E41DDB1443008B4AF2 /* V_AdjustFilterBlur.xib in Resources */ = {isa = PBXBuildFile; fileRef = 440C36E31DDB1443008B4AF2 /* V_AdjustFilterBlur.xib */; };
+		449232A21DD9991600B1F0A5 /* 平静.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4492329E1DD9991600B1F0A5 /* 平静.mp3 */; };
+		449232A31DD9991600B1F0A5 /* 忧郁.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4492329F1DD9991600B1F0A5 /* 忧郁.mp3 */; };
+		449232A41DD9991600B1F0A5 /* 悲伤.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 449232A01DD9991600B1F0A5 /* 悲伤.mp3 */; };
+		449232A51DD9991600B1F0A5 /* 欢快.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 449232A11DD9991600B1F0A5 /* 欢快.mp3 */; };
+		44A8834B1DDA9B3400244F20 /* VC_ColorAdjust.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A883491DDA9B3400244F20 /* VC_ColorAdjust.m */; };
+		44A8834C1DDA9B3400244F20 /* VC_ColorAdjust.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44A8834A1DDA9B3400244F20 /* VC_ColorAdjust.xib */; };
+		44A883631DDAA73D00244F20 /* C_GPUImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A883621DDAA73D00244F20 /* C_GPUImage.m */; };
 		44ABEFFE1DD15CF900B031A3 /* VC_MuiscList.m in Sources */ = {isa = PBXBuildFile; fileRef = 44ABEFFC1DD15CF900B031A3 /* VC_MuiscList.m */; };
 		44ABEFFF1DD15CF900B031A3 /* VC_MuiscList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44ABEFFD1DD15CF900B031A3 /* VC_MuiscList.xib */; };
 		44ABF0031DD160DC00B031A3 /* VC_MuiscInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 44ABF0011DD160DC00B031A3 /* VC_MuiscInfo.m */; };
 		44ABF0041DD160DC00B031A3 /* VC_MuiscInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44ABF0021DD160DC00B031A3 /* VC_MuiscInfo.xib */; };
 		44ABF0091DD162D200B031A3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44ABF0051DD1625000B031A3 /* AVFoundation.framework */; };
-		44ABF00D1DD16BF700B031A3 /* VC_Main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44ABF00B1DD16BF700B031A3 /* VC_Main.m */; };
-		44ABF00E1DD16BF700B031A3 /* VC_Main.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44ABF00C1DD16BF700B031A3 /* VC_Main.xib */; };
+		44ABF00D1DD16BF700B031A3 /* VC_MakeVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 44ABF00B1DD16BF700B031A3 /* VC_MakeVideo.m */; };
+		44ABF00E1DD16BF700B031A3 /* VC_MakeVideo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44ABF00C1DD16BF700B031A3 /* VC_MakeVideo.xib */; };
 		44ABF0121DD17E4500B031A3 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44ABF0111DD17E4500B031A3 /* AVKit.framework */; };
 		44ABF0131DD1825100B031A3 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44ABF00F1DD17D5700B031A3 /* MediaPlayer.framework */; };
-		44ABF0181DD183A700B031A3 /* VC_VideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 44ABF0161DD183A700B031A3 /* VC_VideoPlayer.m */; };
-		44ABF0191DD183A700B031A3 /* VC_VideoPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44ABF0171DD183A700B031A3 /* VC_VideoPlayer.xib */; };
 		44ABF01B1DD1A64A00B031A3 /* BG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44ABF01A1DD1A64A00B031A3 /* BG.jpg */; };
 		44ABF01D1DD1B26000B031A3 /* 蓝圈.png in Resources */ = {isa = PBXBuildFile; fileRef = 44ABF01C1DD1B26000B031A3 /* 蓝圈.png */; };
 		44ABF0201DD1D6A200B031A3 /* yes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44ABF01E1DD1D6A200B031A3 /* yes.jpg */; };
@@ -42,8 +65,9 @@
 		44B37A3E1DD091F0002DFBD7 /* UIViewController+DismissRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B37A3D1DD091F0002DFBD7 /* UIViewController+DismissRoot.m */; };
 		44B37A401DD09935002DFBD7 /* 添加图片.png in Resources */ = {isa = PBXBuildFile; fileRef = 44B37A3F1DD09935002DFBD7 /* 添加图片.png */; };
 		44B6A4A91DD5C9D900C81558 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B6A4A81DD5C9D900C81558 /* GPUImage.framework */; };
-		44B6A4AD1DD5CB5100C81558 /* V_RollingTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B6A4AC1DD5CB5100C81558 /* V_RollingTab.m */; };
 		44B6A4B11DD5CB9000C81558 /* UIView+LayerLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B6A4B01DD5CB9000C81558 /* UIView+LayerLine.m */; };
+		44C550E41DDDBDBB007BFCBA /* VC_EditPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C550E21DDDBDBB007BFCBA /* VC_EditPhoto.m */; };
+		44C550E51DDDBDBB007BFCBA /* VC_EditPhoto.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44C550E31DDDBDBB007BFCBA /* VC_EditPhoto.xib */; };
 		44CBF9971DCC6DBD00D99707 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44CBF9961DCC6DBD00D99707 /* main.m */; };
 		44CBF99A1DCC6DBD00D99707 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 44CBF9991DCC6DBD00D99707 /* AppDelegate.m */; };
 		44CBF9A21DCC6DBD00D99707 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44CBF9A11DCC6DBD00D99707 /* Assets.xcassets */; };
@@ -61,6 +85,17 @@
 		44CBFA321DCC792D00D99707 /* VC_PhotoGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 44CBFA311DCC792D00D99707 /* VC_PhotoGroup.m */; };
 		44CBFA3A1DCC7B8300D99707 /* CellPhotoGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 44CBFA381DCC7B8300D99707 /* CellPhotoGroup.m */; };
 		44CBFA3B1DCC7B8300D99707 /* CellPhotoGroup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44CBFA391DCC7B8300D99707 /* CellPhotoGroup.xib */; };
+		44EE20401DDEA23600F7B697 /* DZSliderChooseColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EE203F1DDEA23600F7B697 /* DZSliderChooseColor.m */; };
+		44EE20421DDEA3BB00F7B697 /* 滑块.png in Resources */ = {isa = PBXBuildFile; fileRef = 44EE20411DDEA3BB00F7B697 /* 滑块.png */; };
+		44EE20471DDF018200F7B697 /* VC_Doodle.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EE20451DDF018200F7B697 /* VC_Doodle.m */; };
+		44EE20481DDF018200F7B697 /* VC_Doodle.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44EE20461DDF018200F7B697 /* VC_Doodle.xib */; };
+		44EE204D1DDF130300F7B697 /* V_DrawingBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EE204B1DDF130300F7B697 /* V_DrawingBoard.m */; };
+		44F7E72E1DDC1AA100220DC0 /* V_RollingTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F7E72D1DDC1AA100220DC0 /* V_RollingTab.m */; };
+		44F7E7321DDC1ABD00220DC0 /* LJPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F7E7311DDC1ABD00220DC0 /* LJPlayerView.m */; };
+		44F7E7361DDC297E00220DC0 /* LJPlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F7E7341DDC297E00220DC0 /* LJPlayerControlView.m */; };
+		44F7E7371DDC297E00220DC0 /* LJPlayerControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44F7E7351DDC297E00220DC0 /* LJPlayerControlView.xib */; };
+		44F7E7391DDC2A3600220DC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44F7E7381DDC2A3600220DC0 /* Assets.xcassets */; };
+		44F7E7691DDC4B1B00220DC0 /* VC_VideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F7E7681DDC4B1B00220DC0 /* VC_VideoPlayer.m */; };
 		6079BF037C7D11E6B6D995F1 /* libPods-SlideDome.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A8F457F8E6953DE5CB2C20 /* libPods-SlideDome.a */; };
 		F245170A1DCF14D1003275C9 /* VideoBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = F24517091DCF14D1003275C9 /* VideoBuilder.m */; };
 		F245170F1DCF1643003275C9 /* UIImage+Convert.m in Sources */ = {isa = PBXBuildFile; fileRef = F245170E1DCF1643003275C9 /* UIImage+Convert.m */; };
@@ -86,7 +121,43 @@
 /* Begin PBXFileReference section */
 		14A8F457F8E6953DE5CB2C20 /* libPods-SlideDome.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SlideDome.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		196E7998245B892B2783A308 /* Pods-SlideDome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideDome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SlideDome/Pods-SlideDome.debug.xcconfig"; sourceTree = "<group>"; };
+		440C36A21DDB010F008B4AF2 /* V_AdjustRGB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V_AdjustRGB.h; sourceTree = "<group>"; };
+		440C36A31DDB010F008B4AF2 /* V_AdjustRGB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = V_AdjustRGB.m; sourceTree = "<group>"; };
+		440C36A41DDB010F008B4AF2 /* V_AdjustRGB.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = V_AdjustRGB.xib; sourceTree = "<group>"; };
+		440C36A61DDB010F008B4AF2 /* V_AdjustBrightness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V_AdjustBrightness.h; sourceTree = "<group>"; };
+		440C36A71DDB010F008B4AF2 /* V_AdjustBrightness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = V_AdjustBrightness.m; sourceTree = "<group>"; };
+		440C36A81DDB010F008B4AF2 /* V_AdjustBrightness.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = V_AdjustBrightness.xib; sourceTree = "<group>"; };
+		440C36AA1DDB010F008B4AF2 /* V_AdjustContrast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V_AdjustContrast.h; sourceTree = "<group>"; };
+		440C36AB1DDB010F008B4AF2 /* V_AdjustContrast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = V_AdjustContrast.m; sourceTree = "<group>"; };
+		440C36AC1DDB010F008B4AF2 /* V_AdjustContrast.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = V_AdjustContrast.xib; sourceTree = "<group>"; };
+		440C36AE1DDB010F008B4AF2 /* V_AdjustExposure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V_AdjustExposure.h; sourceTree = "<group>"; };
+		440C36AF1DDB010F008B4AF2 /* V_AdjustExposure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = V_AdjustExposure.m; sourceTree = "<group>"; };
+		440C36B01DDB010F008B4AF2 /* V_AdjustExposure.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = V_AdjustExposure.xib; sourceTree = "<group>"; };
+		440C36B21DDB010F008B4AF2 /* V_AdjustWhiteBalance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V_AdjustWhiteBalance.h; sourceTree = "<group>"; };
+		440C36B31DDB010F008B4AF2 /* V_AdjustWhiteBalance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = V_AdjustWhiteBalance.m; sourceTree = "<group>"; };
+		440C36B41DDB010F008B4AF2 /* V_AdjustWhiteBalance.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = V_AdjustWhiteBalance.xib; sourceTree = "<group>"; };
+		440C36B61DDB010F008B4AF2 /* V_AdjustSaturation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V_AdjustSaturation.h; sourceTree = "<group>"; };
+		440C36B71DDB010F008B4AF2 /* V_AdjustSaturation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = V_AdjustSaturation.m; sourceTree = "<group>"; };
+		440C36B81DDB010F008B4AF2 /* V_AdjustSaturation.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = V_AdjustSaturation.xib; sourceTree = "<group>"; };
+		440C36D41DDB057D008B4AF2 /* V_AdjustFilterEmboss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V_AdjustFilterEmboss.h; sourceTree = "<group>"; };
+		440C36D51DDB057D008B4AF2 /* V_AdjustFilterEmboss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = V_AdjustFilterEmboss.m; sourceTree = "<group>"; };
+		440C36D61DDB057D008B4AF2 /* V_AdjustFilterEmboss.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = V_AdjustFilterEmboss.xib; sourceTree = "<group>"; };
+		440C36D81DDB057D008B4AF2 /* V_AdjustFilterSharpen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V_AdjustFilterSharpen.h; sourceTree = "<group>"; };
+		440C36D91DDB057D008B4AF2 /* V_AdjustFilterSharpen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = V_AdjustFilterSharpen.m; sourceTree = "<group>"; };
+		440C36DA1DDB057D008B4AF2 /* V_AdjustFilterSharpen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = V_AdjustFilterSharpen.xib; sourceTree = "<group>"; };
+		440C36E01DDB1432008B4AF2 /* V_AdjustFilterBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = V_AdjustFilterBlur.h; path = "模糊/V_AdjustFilterBlur.h"; sourceTree = "<group>"; };
+		440C36E11DDB1432008B4AF2 /* V_AdjustFilterBlur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = V_AdjustFilterBlur.m; path = "模糊/V_AdjustFilterBlur.m"; sourceTree = "<group>"; };
+		440C36E31DDB1443008B4AF2 /* V_AdjustFilterBlur.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = V_AdjustFilterBlur.xib; path = "模糊/V_AdjustFilterBlur.xib"; sourceTree = "<group>"; };
 		449085311DCC94A100456AB0 /* Tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Tools.h; path = PCH_Header/Tools.h; sourceTree = "<group>"; };
+		4492329E1DD9991600B1F0A5 /* 平静.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "平静.mp3"; sourceTree = "<group>"; };
+		4492329F1DD9991600B1F0A5 /* 忧郁.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "忧郁.mp3"; sourceTree = "<group>"; };
+		449232A01DD9991600B1F0A5 /* 悲伤.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "悲伤.mp3"; sourceTree = "<group>"; };
+		449232A11DD9991600B1F0A5 /* 欢快.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "欢快.mp3"; sourceTree = "<group>"; };
+		44A883481DDA9B3400244F20 /* VC_ColorAdjust.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VC_ColorAdjust.h; path = "Function/主功能/图片处理/色彩调节/VC_ColorAdjust.h"; sourceTree = "<group>"; };
+		44A883491DDA9B3400244F20 /* VC_ColorAdjust.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VC_ColorAdjust.m; path = "Function/主功能/图片处理/色彩调节/VC_ColorAdjust.m"; sourceTree = "<group>"; };
+		44A8834A1DDA9B3400244F20 /* VC_ColorAdjust.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VC_ColorAdjust.xib; path = "Function/主功能/图片处理/色彩调节/VC_ColorAdjust.xib"; sourceTree = "<group>"; };
+		44A883611DDAA73D00244F20 /* C_GPUImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C_GPUImage.h; path = Function/PublicClass/C_GPUImage.h; sourceTree = "<group>"; };
+		44A883621DDAA73D00244F20 /* C_GPUImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = C_GPUImage.m; path = Function/PublicClass/C_GPUImage.m; sourceTree = "<group>"; };
 		44ABEFFB1DD15CF900B031A3 /* VC_MuiscList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VC_MuiscList.h; path = "Function/主功能/音乐/VC/音乐列表/VC_MuiscList.h"; sourceTree = "<group>"; };
 		44ABEFFC1DD15CF900B031A3 /* VC_MuiscList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VC_MuiscList.m; path = "Function/主功能/音乐/VC/音乐列表/VC_MuiscList.m"; sourceTree = "<group>"; };
 		44ABEFFD1DD15CF900B031A3 /* VC_MuiscList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VC_MuiscList.xib; path = "Function/主功能/音乐/VC/音乐列表/VC_MuiscList.xib"; sourceTree = "<group>"; };
@@ -95,14 +166,11 @@
 		44ABF0021DD160DC00B031A3 /* VC_MuiscInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VC_MuiscInfo.xib; path = "Function/主功能/音乐/VC/音乐详情/VC_MuiscInfo.xib"; sourceTree = "<group>"; };
 		44ABF0051DD1625000B031A3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		44ABF0071DD1629500B031A3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		44ABF00A1DD16BF700B031A3 /* VC_Main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VC_Main.h; path = "Function/主功能/VC_Main.h"; sourceTree = "<group>"; };
-		44ABF00B1DD16BF700B031A3 /* VC_Main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VC_Main.m; path = "Function/主功能/VC_Main.m"; sourceTree = "<group>"; };
-		44ABF00C1DD16BF700B031A3 /* VC_Main.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VC_Main.xib; path = "Function/主功能/VC_Main.xib"; sourceTree = "<group>"; };
+		44ABF00A1DD16BF700B031A3 /* VC_MakeVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VC_MakeVideo.h; path = "Function/主功能/VC_MakeVideo.h"; sourceTree = "<group>"; };
+		44ABF00B1DD16BF700B031A3 /* VC_MakeVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VC_MakeVideo.m; path = "Function/主功能/VC_MakeVideo.m"; sourceTree = "<group>"; };
+		44ABF00C1DD16BF700B031A3 /* VC_MakeVideo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VC_MakeVideo.xib; path = "Function/主功能/VC_MakeVideo.xib"; sourceTree = "<group>"; };
 		44ABF00F1DD17D5700B031A3 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		44ABF0111DD17E4500B031A3 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
-		44ABF0151DD183A700B031A3 /* VC_VideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VC_VideoPlayer.h; path = "Function/主功能/视频播放/VC_VideoPlayer.h"; sourceTree = "<group>"; };
-		44ABF0161DD183A700B031A3 /* VC_VideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VC_VideoPlayer.m; path = "Function/主功能/视频播放/VC_VideoPlayer.m"; sourceTree = "<group>"; };
-		44ABF0171DD183A700B031A3 /* VC_VideoPlayer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VC_VideoPlayer.xib; path = "Function/主功能/视频播放/VC_VideoPlayer.xib"; sourceTree = "<group>"; };
 		44ABF01A1DD1A64A00B031A3 /* BG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BG.jpg; sourceTree = "<group>"; };
 		44ABF01C1DD1B26000B031A3 /* 蓝圈.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "蓝圈.png"; sourceTree = "<group>"; };
 		44ABF01E1DD1D6A200B031A3 /* yes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yes.jpg; sourceTree = "<group>"; };
@@ -129,11 +197,12 @@
 		44B37A3D1DD091F0002DFBD7 /* UIViewController+DismissRoot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+DismissRoot.m"; path = "UIViewController/UIViewController+DismissRoot.m"; sourceTree = "<group>"; };
 		44B37A3F1DD09935002DFBD7 /* 添加图片.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "添加图片.png"; sourceTree = "<group>"; };
 		44B6A4A81DD5C9D900C81558 /* GPUImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GPUImage.framework; sourceTree = "<group>"; };
-		44B6A4AB1DD5CB5100C81558 /* V_RollingTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V_RollingTab.h; sourceTree = "<group>"; };
-		44B6A4AC1DD5CB5100C81558 /* V_RollingTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = V_RollingTab.m; sourceTree = "<group>"; };
 		44B6A4AF1DD5CB9000C81558 /* UIView+LayerLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LayerLine.h"; sourceTree = "<group>"; };
 		44B6A4B01DD5CB9000C81558 /* UIView+LayerLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LayerLine.m"; sourceTree = "<group>"; };
 		44BE483D69B5031EF96BC180 /* Pods-SlideDome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideDome.release.xcconfig"; path = "Pods/Target Support Files/Pods-SlideDome/Pods-SlideDome.release.xcconfig"; sourceTree = "<group>"; };
+		44C550E11DDDBDBB007BFCBA /* VC_EditPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VC_EditPhoto.h; path = "Function/主功能/VC_EditPhoto.h"; sourceTree = "<group>"; };
+		44C550E21DDDBDBB007BFCBA /* VC_EditPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VC_EditPhoto.m; path = "Function/主功能/VC_EditPhoto.m"; sourceTree = "<group>"; };
+		44C550E31DDDBDBB007BFCBA /* VC_EditPhoto.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VC_EditPhoto.xib; path = "Function/主功能/VC_EditPhoto.xib"; sourceTree = "<group>"; };
 		44CBF9921DCC6DBD00D99707 /* SlideDome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideDome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44CBF9961DCC6DBD00D99707 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		44CBF9981DCC6DBD00D99707 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -164,6 +233,24 @@
 		44CBFA371DCC7B8300D99707 /* CellPhotoGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellPhotoGroup.h; path = "Function/相册选取图片/Cell/CellPhotoGroup.h"; sourceTree = "<group>"; };
 		44CBFA381DCC7B8300D99707 /* CellPhotoGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellPhotoGroup.m; path = "Function/相册选取图片/Cell/CellPhotoGroup.m"; sourceTree = "<group>"; };
 		44CBFA391DCC7B8300D99707 /* CellPhotoGroup.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellPhotoGroup.xib; path = "Function/相册选取图片/Cell/CellPhotoGroup.xib"; sourceTree = "<group>"; };
+		44EE203E1DDEA23600F7B697 /* DZSliderChooseColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZSliderChooseColor.h; sourceTree = "<group>"; };
+		44EE203F1DDEA23600F7B697 /* DZSliderChooseColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZSliderChooseColor.m; sourceTree = "<group>"; };
+		44EE20411DDEA3BB00F7B697 /* 滑块.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "滑块.png"; sourceTree = "<group>"; };
+		44EE20441DDF018200F7B697 /* VC_Doodle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VC_Doodle.h; path = "Function/主功能/图片处理/涂鸦/VC_Doodle.h"; sourceTree = "<group>"; };
+		44EE20451DDF018200F7B697 /* VC_Doodle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VC_Doodle.m; path = "Function/主功能/图片处理/涂鸦/VC_Doodle.m"; sourceTree = "<group>"; };
+		44EE20461DDF018200F7B697 /* VC_Doodle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VC_Doodle.xib; path = "Function/主功能/图片处理/涂鸦/VC_Doodle.xib"; sourceTree = "<group>"; };
+		44EE204A1DDF130300F7B697 /* V_DrawingBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V_DrawingBoard.h; sourceTree = "<group>"; };
+		44EE204B1DDF130300F7B697 /* V_DrawingBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = V_DrawingBoard.m; sourceTree = "<group>"; };
+		44F7E72C1DDC1AA100220DC0 /* V_RollingTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V_RollingTab.h; sourceTree = "<group>"; };
+		44F7E72D1DDC1AA100220DC0 /* V_RollingTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = V_RollingTab.m; sourceTree = "<group>"; };
+		44F7E7301DDC1ABD00220DC0 /* LJPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJPlayerView.h; sourceTree = "<group>"; };
+		44F7E7311DDC1ABD00220DC0 /* LJPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJPlayerView.m; sourceTree = "<group>"; };
+		44F7E7331DDC297E00220DC0 /* LJPlayerControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJPlayerControlView.h; sourceTree = "<group>"; };
+		44F7E7341DDC297E00220DC0 /* LJPlayerControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJPlayerControlView.m; sourceTree = "<group>"; };
+		44F7E7351DDC297E00220DC0 /* LJPlayerControlView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJPlayerControlView.xib; sourceTree = "<group>"; };
+		44F7E7381DDC2A3600220DC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		44F7E7671DDC4B1B00220DC0 /* VC_VideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VC_VideoPlayer.h; path = "Function/主功能/视频播放/VC_VideoPlayer.h"; sourceTree = "<group>"; };
+		44F7E7681DDC4B1B00220DC0 /* VC_VideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VC_VideoPlayer.m; path = "Function/主功能/视频播放/VC_VideoPlayer.m"; sourceTree = "<group>"; };
 		F24517081DCF14D1003275C9 /* VideoBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoBuilder.h; sourceTree = "<group>"; };
 		F24517091DCF14D1003275C9 /* VideoBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoBuilder.m; sourceTree = "<group>"; };
 		F245170D1DCF1643003275C9 /* UIImage+Convert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Convert.h"; sourceTree = "<group>"; };
@@ -214,6 +301,121 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		440C369F1DDB00DB008B4AF2 /* 滤镜调节 */ = {
+			isa = PBXGroup;
+			children = (
+				440C36DF1DDB13F8008B4AF2 /* 模糊 */,
+				440C36D31DDB057D008B4AF2 /* 浮雕 */,
+				440C36D71DDB057D008B4AF2 /* 锐化 */,
+			);
+			name = "滤镜调节";
+			path = "Function/主功能/图片处理/Views/滤镜调节";
+			sourceTree = "<group>";
+		};
+		440C36A01DDB010F008B4AF2 /* 色彩调节 */ = {
+			isa = PBXGroup;
+			children = (
+				440C36A11DDB010F008B4AF2 /* RGB调节 */,
+				440C36A51DDB010F008B4AF2 /* 亮度调节 */,
+				440C36A91DDB010F008B4AF2 /* 对比度调节 */,
+				440C36AD1DDB010F008B4AF2 /* 曝光度调节 */,
+				440C36B11DDB010F008B4AF2 /* 色温调节 */,
+				440C36B51DDB010F008B4AF2 /* 饱和度调节 */,
+			);
+			name = "色彩调节";
+			path = "Function/主功能/图片处理/Views/色彩调节";
+			sourceTree = "<group>";
+		};
+		440C36A11DDB010F008B4AF2 /* RGB调节 */ = {
+			isa = PBXGroup;
+			children = (
+				440C36A21DDB010F008B4AF2 /* V_AdjustRGB.h */,
+				440C36A31DDB010F008B4AF2 /* V_AdjustRGB.m */,
+				440C36A41DDB010F008B4AF2 /* V_AdjustRGB.xib */,
+			);
+			path = "RGB调节";
+			sourceTree = "<group>";
+		};
+		440C36A51DDB010F008B4AF2 /* 亮度调节 */ = {
+			isa = PBXGroup;
+			children = (
+				440C36A61DDB010F008B4AF2 /* V_AdjustBrightness.h */,
+				440C36A71DDB010F008B4AF2 /* V_AdjustBrightness.m */,
+				440C36A81DDB010F008B4AF2 /* V_AdjustBrightness.xib */,
+			);
+			path = "亮度调节";
+			sourceTree = "<group>";
+		};
+		440C36A91DDB010F008B4AF2 /* 对比度调节 */ = {
+			isa = PBXGroup;
+			children = (
+				440C36AA1DDB010F008B4AF2 /* V_AdjustContrast.h */,
+				440C36AB1DDB010F008B4AF2 /* V_AdjustContrast.m */,
+				440C36AC1DDB010F008B4AF2 /* V_AdjustContrast.xib */,
+			);
+			path = "对比度调节";
+			sourceTree = "<group>";
+		};
+		440C36AD1DDB010F008B4AF2 /* 曝光度调节 */ = {
+			isa = PBXGroup;
+			children = (
+				440C36AE1DDB010F008B4AF2 /* V_AdjustExposure.h */,
+				440C36AF1DDB010F008B4AF2 /* V_AdjustExposure.m */,
+				440C36B01DDB010F008B4AF2 /* V_AdjustExposure.xib */,
+			);
+			path = "曝光度调节";
+			sourceTree = "<group>";
+		};
+		440C36B11DDB010F008B4AF2 /* 色温调节 */ = {
+			isa = PBXGroup;
+			children = (
+				440C36B21DDB010F008B4AF2 /* V_AdjustWhiteBalance.h */,
+				440C36B31DDB010F008B4AF2 /* V_AdjustWhiteBalance.m */,
+				440C36B41DDB010F008B4AF2 /* V_AdjustWhiteBalance.xib */,
+			);
+			path = "色温调节";
+			sourceTree = "<group>";
+		};
+		440C36B51DDB010F008B4AF2 /* 饱和度调节 */ = {
+			isa = PBXGroup;
+			children = (
+				440C36B61DDB010F008B4AF2 /* V_AdjustSaturation.h */,
+				440C36B71DDB010F008B4AF2 /* V_AdjustSaturation.m */,
+				440C36B81DDB010F008B4AF2 /* V_AdjustSaturation.xib */,
+			);
+			path = "饱和度调节";
+			sourceTree = "<group>";
+		};
+		440C36D31DDB057D008B4AF2 /* 浮雕 */ = {
+			isa = PBXGroup;
+			children = (
+				440C36D41DDB057D008B4AF2 /* V_AdjustFilterEmboss.h */,
+				440C36D51DDB057D008B4AF2 /* V_AdjustFilterEmboss.m */,
+				440C36D61DDB057D008B4AF2 /* V_AdjustFilterEmboss.xib */,
+			);
+			path = "浮雕";
+			sourceTree = "<group>";
+		};
+		440C36D71DDB057D008B4AF2 /* 锐化 */ = {
+			isa = PBXGroup;
+			children = (
+				440C36D81DDB057D008B4AF2 /* V_AdjustFilterSharpen.h */,
+				440C36D91DDB057D008B4AF2 /* V_AdjustFilterSharpen.m */,
+				440C36DA1DDB057D008B4AF2 /* V_AdjustFilterSharpen.xib */,
+			);
+			path = "锐化";
+			sourceTree = "<group>";
+		};
+		440C36DF1DDB13F8008B4AF2 /* 模糊 */ = {
+			isa = PBXGroup;
+			children = (
+				440C36E01DDB1432008B4AF2 /* V_AdjustFilterBlur.h */,
+				440C36E11DDB1432008B4AF2 /* V_AdjustFilterBlur.m */,
+				440C36E31DDB1443008B4AF2 /* V_AdjustFilterBlur.xib */,
+			);
+			name = "模糊";
+			sourceTree = "<group>";
+		};
 		449085321DCC9E0B00456AB0 /* 选取相册相片 */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +436,55 @@
 			name = "相册组";
 			sourceTree = "<group>";
 		};
+		4492329D1DD9991600B1F0A5 /* Muisc */ = {
+			isa = PBXGroup;
+			children = (
+				4492329E1DD9991600B1F0A5 /* 平静.mp3 */,
+				4492329F1DD9991600B1F0A5 /* 忧郁.mp3 */,
+				449232A01DD9991600B1F0A5 /* 悲伤.mp3 */,
+				449232A11DD9991600B1F0A5 /* 欢快.mp3 */,
+			);
+			path = Muisc;
+			sourceTree = "<group>";
+		};
+		44A883461DDA9A3C00244F20 /* 图片处理 */ = {
+			isa = PBXGroup;
+			children = (
+				44EE20431DDF014300F7B697 /* 涂鸦 */,
+				44A883591DDAA4CD00244F20 /* Views */,
+				44A883471DDA9A5300244F20 /* 图片色彩调节 */,
+			);
+			name = "图片处理";
+			sourceTree = "<group>";
+		};
+		44A883471DDA9A5300244F20 /* 图片色彩调节 */ = {
+			isa = PBXGroup;
+			children = (
+				44A883481DDA9B3400244F20 /* VC_ColorAdjust.h */,
+				44A883491DDA9B3400244F20 /* VC_ColorAdjust.m */,
+				44A8834A1DDA9B3400244F20 /* VC_ColorAdjust.xib */,
+			);
+			name = "图片色彩调节";
+			sourceTree = "<group>";
+		};
+		44A883591DDAA4CD00244F20 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				440C36A01DDB010F008B4AF2 /* 色彩调节 */,
+				440C369F1DDB00DB008B4AF2 /* 滤镜调节 */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		44A883601DDAA6F700244F20 /* PublicClass */ = {
+			isa = PBXGroup;
+			children = (
+				44A883611DDAA73D00244F20 /* C_GPUImage.h */,
+				44A883621DDAA73D00244F20 /* C_GPUImage.m */,
+			);
+			name = PublicClass;
+			sourceTree = "<group>";
+		};
 		44ABEFF51DD15C0500B031A3 /* 主页 */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,9 +499,12 @@
 				44CBF9CA1DCC6EBA00D99707 /* VC_MainPage.h */,
 				44CBF9CB1DCC6EBA00D99707 /* VC_MainPage.m */,
 				44CBF9CC1DCC6EBA00D99707 /* VC_MainPage.xib */,
-				44ABF00A1DD16BF700B031A3 /* VC_Main.h */,
-				44ABF00B1DD16BF700B031A3 /* VC_Main.m */,
-				44ABF00C1DD16BF700B031A3 /* VC_Main.xib */,
+				44ABF00A1DD16BF700B031A3 /* VC_MakeVideo.h */,
+				44ABF00B1DD16BF700B031A3 /* VC_MakeVideo.m */,
+				44ABF00C1DD16BF700B031A3 /* VC_MakeVideo.xib */,
+				44C550E11DDDBDBB007BFCBA /* VC_EditPhoto.h */,
+				44C550E21DDDBDBB007BFCBA /* VC_EditPhoto.m */,
+				44C550E31DDDBDBB007BFCBA /* VC_EditPhoto.xib */,
 			);
 			name = VC;
 			sourceTree = "<group>";
@@ -296,9 +550,8 @@
 		44ABF0141DD1836100B031A3 /* 视频播放 */ = {
 			isa = PBXGroup;
 			children = (
-				44ABF0151DD183A700B031A3 /* VC_VideoPlayer.h */,
-				44ABF0161DD183A700B031A3 /* VC_VideoPlayer.m */,
-				44ABF0171DD183A700B031A3 /* VC_VideoPlayer.xib */,
+				44F7E7671DDC4B1B00220DC0 /* VC_VideoPlayer.h */,
+				44F7E7681DDC4B1B00220DC0 /* VC_VideoPlayer.m */,
 			);
 			name = "视频播放";
 			sourceTree = "<group>";
@@ -306,8 +559,8 @@
 		44B37A0B1DD0364D002DFBD7 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				4492329D1DD9991600B1F0A5 /* Muisc */,
 				44B37A0C1DD0364D002DFBD7 /* Image */,
-				44B37A101DD0364D002DFBD7 /* Muisc */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -324,13 +577,6 @@
 				44B37A0F1DD0364D002DFBD7 /* IMG_2.jpg */,
 			);
 			path = Image;
-			sourceTree = "<group>";
-		};
-		44B37A101DD0364D002DFBD7 /* Muisc */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Muisc;
 			sourceTree = "<group>";
 		};
 		44B37A161DD04F1B002DFBD7 /* 选取图片 */ = {
@@ -399,9 +645,13 @@
 		44B37A491DD09C60002DFBD7 /* PublicView */ = {
 			isa = PBXGroup;
 			children = (
-				44B6A4AA1DD5CB5100C81558 /* 按钮列 */,
+				44EE20491DDF130300F7B697 /* 涂鸦 */,
+				44EE203D1DDEA23600F7B697 /* 颜色选取滑块 */,
+				44F7E72F1DDC1ABD00220DC0 /* 简单视频播放 */,
+				44F7E72B1DDC1AA100220DC0 /* 按钮列 */,
 			);
 			name = PublicView;
+			path = Function/PublicView;
 			sourceTree = "<group>";
 		};
 		44B6A4A71DD5C9D900C81558 /* GUPImage */ = {
@@ -410,16 +660,6 @@
 				44B6A4A81DD5C9D900C81558 /* GPUImage.framework */,
 			);
 			path = GUPImage;
-			sourceTree = "<group>";
-		};
-		44B6A4AA1DD5CB5100C81558 /* 按钮列 */ = {
-			isa = PBXGroup;
-			children = (
-				44B6A4AB1DD5CB5100C81558 /* V_RollingTab.h */,
-				44B6A4AC1DD5CB5100C81558 /* V_RollingTab.m */,
-			);
-			name = "按钮列";
-			path = "Function/PublicView/按钮列";
 			sourceTree = "<group>";
 		};
 		44B6A4AE1DD5CB9000C81558 /* UIView */ = {
@@ -503,6 +743,7 @@
 		44CBF9C81DCC6E3600D99707 /* Function */ = {
 			isa = PBXGroup;
 			children = (
+				44A883601DDAA6F700244F20 /* PublicClass */,
 				44B37A491DD09C60002DFBD7 /* PublicView */,
 				44CBF9C91DCC6E8C00D99707 /* 主功能 */,
 			);
@@ -512,6 +753,7 @@
 		44CBF9C91DCC6E8C00D99707 /* 主功能 */ = {
 			isa = PBXGroup;
 			children = (
+				44A883461DDA9A3C00244F20 /* 图片处理 */,
 				44ABEFF71DD15C3F00B031A3 /* 音乐 */,
 				44ABEFF51DD15C0500B031A3 /* 主页 */,
 				44CBF9D11DCC72BD00D99707 /* 相册选取图片 */,
@@ -574,6 +816,57 @@
 				44CBF9D71DCC751F00D99707 /* CellLocationPhoto */,
 			);
 			name = Cell;
+			sourceTree = "<group>";
+		};
+		44EE203D1DDEA23600F7B697 /* 颜色选取滑块 */ = {
+			isa = PBXGroup;
+			children = (
+				44EE20411DDEA3BB00F7B697 /* 滑块.png */,
+				44EE203E1DDEA23600F7B697 /* DZSliderChooseColor.h */,
+				44EE203F1DDEA23600F7B697 /* DZSliderChooseColor.m */,
+			);
+			path = "颜色选取滑块";
+			sourceTree = "<group>";
+		};
+		44EE20431DDF014300F7B697 /* 涂鸦 */ = {
+			isa = PBXGroup;
+			children = (
+				44EE20441DDF018200F7B697 /* VC_Doodle.h */,
+				44EE20451DDF018200F7B697 /* VC_Doodle.m */,
+				44EE20461DDF018200F7B697 /* VC_Doodle.xib */,
+			);
+			name = "涂鸦";
+			sourceTree = "<group>";
+		};
+		44EE20491DDF130300F7B697 /* 涂鸦 */ = {
+			isa = PBXGroup;
+			children = (
+				44EE204A1DDF130300F7B697 /* V_DrawingBoard.h */,
+				44EE204B1DDF130300F7B697 /* V_DrawingBoard.m */,
+			);
+			path = "涂鸦";
+			sourceTree = "<group>";
+		};
+		44F7E72B1DDC1AA100220DC0 /* 按钮列 */ = {
+			isa = PBXGroup;
+			children = (
+				44F7E72C1DDC1AA100220DC0 /* V_RollingTab.h */,
+				44F7E72D1DDC1AA100220DC0 /* V_RollingTab.m */,
+			);
+			path = "按钮列";
+			sourceTree = "<group>";
+		};
+		44F7E72F1DDC1ABD00220DC0 /* 简单视频播放 */ = {
+			isa = PBXGroup;
+			children = (
+				44F7E7381DDC2A3600220DC0 /* Assets.xcassets */,
+				44F7E7331DDC297E00220DC0 /* LJPlayerControlView.h */,
+				44F7E7341DDC297E00220DC0 /* LJPlayerControlView.m */,
+				44F7E7351DDC297E00220DC0 /* LJPlayerControlView.xib */,
+				44F7E7301DDC1ABD00220DC0 /* LJPlayerView.h */,
+				44F7E7311DDC1ABD00220DC0 /* LJPlayerView.m */,
+			);
+			path = "简单视频播放";
 			sourceTree = "<group>";
 		};
 		85809E052FB3E9F29E6199E8 /* Pods */ = {
@@ -729,37 +1022,55 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44A8834C1DDA9B3400244F20 /* VC_ColorAdjust.xib in Resources */,
 				44CBFA141DCC751F00D99707 /* VC_locationPhoto.xib in Resources */,
+				449232A51DD9991600B1F0A5 /* 欢快.mp3 in Resources */,
 				44B37A2E1DD0818A002DFBD7 /* Images.xcassets in Resources */,
 				44B37A201DD07F2A002DFBD7 /* 640*960.png in Resources */,
+				440C36BA1DDB010F008B4AF2 /* V_AdjustRGB.xib in Resources */,
 				44ABF0211DD1D6A200B031A3 /* no.jpg in Resources */,
+				440C36BC1DDB010F008B4AF2 /* V_AdjustBrightness.xib in Resources */,
 				44ABF0041DD160DC00B031A3 /* VC_MuiscInfo.xib in Resources */,
+				44C550E51DDDBDBB007BFCBA /* VC_EditPhoto.xib in Resources */,
+				449232A41DD9991600B1F0A5 /* 悲伤.mp3 in Resources */,
 				44CBF9A51DCC6DBD00D99707 /* LaunchScreen.storyboard in Resources */,
+				440C36BE1DDB010F008B4AF2 /* V_AdjustContrast.xib in Resources */,
+				440C36C21DDB010F008B4AF2 /* V_AdjustWhiteBalance.xib in Resources */,
 				44B37A291DD080DB002DFBD7 /* 180.png in Resources */,
 				44B37A281DD080DB002DFBD7 /* 120.png in Resources */,
 				44CBFA3B1DCC7B8300D99707 /* CellPhotoGroup.xib in Resources */,
 				44ABEFFF1DD15CF900B031A3 /* VC_MuiscList.xib in Resources */,
 				44ABF01B1DD1A64A00B031A3 /* BG.jpg in Resources */,
-				44ABF0191DD183A700B031A3 /* VC_VideoPlayer.xib in Resources */,
+				449232A21DD9991600B1F0A5 /* 平静.mp3 in Resources */,
 				44B37A341DD088B3002DFBD7 /* CellPhotoPreview.xib in Resources */,
+				440C36C01DDB010F008B4AF2 /* V_AdjustExposure.xib in Resources */,
 				44B37A141DD0364D002DFBD7 /* IMG_2.jpg in Resources */,
 				44CBF9A21DCC6DBD00D99707 /* Assets.xcassets in Resources */,
+				440C36DC1DDB057D008B4AF2 /* V_AdjustFilterEmboss.xib in Resources */,
 				44B37A2C1DD080DB002DFBD7 /* 87.png in Resources */,
 				44B37A401DD09935002DFBD7 /* 添加图片.png in Resources */,
+				44F7E7371DDC297E00220DC0 /* LJPlayerControlView.xib in Resources */,
+				440C36DE1DDB057D008B4AF2 /* V_AdjustFilterSharpen.xib in Resources */,
+				449232A31DD9991600B1F0A5 /* 忧郁.mp3 in Resources */,
 				44B37A181DD04F1B002DFBD7 /* Check.png in Resources */,
 				44CBF9CE1DCC6EBA00D99707 /* VC_MainPage.xib in Resources */,
 				44B37A2A1DD080DB002DFBD7 /* 58.png in Resources */,
 				44B37A1E1DD07F2A002DFBD7 /* 1242*2208.png in Resources */,
 				44ABF01D1DD1B26000B031A3 /* 蓝圈.png in Resources */,
+				440C36E41DDB1443008B4AF2 /* V_AdjustFilterBlur.xib in Resources */,
 				44CBFA111DCC751F00D99707 /* CellLocationPhoto.xib in Resources */,
 				44ABF0201DD1D6A200B031A3 /* yes.jpg in Resources */,
 				44B37A121DD0364D002DFBD7 /* IMG_0.jpg in Resources */,
-				44ABF00E1DD16BF700B031A3 /* VC_Main.xib in Resources */,
+				44ABF00E1DD16BF700B031A3 /* VC_MakeVideo.xib in Resources */,
 				44B37A2B1DD080DB002DFBD7 /* 80.png in Resources */,
+				44EE20481DDF018200F7B697 /* VC_Doodle.xib in Resources */,
 				44B37A211DD07F2A002DFBD7 /* 750*1334.png in Resources */,
+				440C36C41DDB010F008B4AF2 /* V_AdjustSaturation.xib in Resources */,
 				44B37A131DD0364D002DFBD7 /* IMG_1.jpg in Resources */,
 				44B37A1F1DD07F2A002DFBD7 /* 640*1136.png in Resources */,
 				44B37A381DD08EC9002DFBD7 /* 白圈.png in Resources */,
+				44EE20421DDEA3BB00F7B697 /* 滑块.png in Resources */,
+				44F7E7391DDC2A3600220DC0 /* Assets.xcassets in Resources */,
 				44CBF9D01DCC700100D99707 /* Podfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -833,23 +1144,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44ABF00D1DD16BF700B031A3 /* VC_Main.m in Sources */,
+				440C36DB1DDB057D008B4AF2 /* V_AdjustFilterEmboss.m in Sources */,
+				44A883631DDAA73D00244F20 /* C_GPUImage.m in Sources */,
+				44ABF00D1DD16BF700B031A3 /* VC_MakeVideo.m in Sources */,
+				44F7E7691DDC4B1B00220DC0 /* VC_VideoPlayer.m in Sources */,
 				44ABF0031DD160DC00B031A3 /* VC_MuiscInfo.m in Sources */,
+				44F7E72E1DDC1AA100220DC0 /* V_RollingTab.m in Sources */,
 				44CBFA321DCC792D00D99707 /* VC_PhotoGroup.m in Sources */,
 				44ABEFFE1DD15CF900B031A3 /* VC_MuiscList.m in Sources */,
 				44CBFA3A1DCC7B8300D99707 /* CellPhotoGroup.m in Sources */,
 				44CBFA101DCC751F00D99707 /* CellLocationPhoto.m in Sources */,
-				44ABF0181DD183A700B031A3 /* VC_VideoPlayer.m in Sources */,
+				44F7E7361DDC297E00220DC0 /* LJPlayerControlView.m in Sources */,
+				440C36B91DDB010F008B4AF2 /* V_AdjustRGB.m in Sources */,
+				440C36C11DDB010F008B4AF2 /* V_AdjustWhiteBalance.m in Sources */,
+				440C36BF1DDB010F008B4AF2 /* V_AdjustExposure.m in Sources */,
+				44EE20471DDF018200F7B697 /* VC_Doodle.m in Sources */,
 				44CBF99A1DCC6DBD00D99707 /* AppDelegate.m in Sources */,
 				44CBF9CD1DCC6EBA00D99707 /* VC_MainPage.m in Sources */,
 				44CBF9971DCC6DBD00D99707 /* main.m in Sources */,
+				44EE20401DDEA23600F7B697 /* DZSliderChooseColor.m in Sources */,
 				F245170F1DCF1643003275C9 /* UIImage+Convert.m in Sources */,
-				44B6A4AD1DD5CB5100C81558 /* V_RollingTab.m in Sources */,
+				44F7E7321DDC1ABD00220DC0 /* LJPlayerView.m in Sources */,
+				440C36DD1DDB057D008B4AF2 /* V_AdjustFilterSharpen.m in Sources */,
+				440C36E21DDB1432008B4AF2 /* V_AdjustFilterBlur.m in Sources */,
 				44CBFA131DCC751F00D99707 /* VC_locationPhoto.m in Sources */,
 				F245170A1DCF14D1003275C9 /* VideoBuilder.m in Sources */,
 				44B37A331DD088B3002DFBD7 /* CellPhotoPreview.m in Sources */,
+				44EE204D1DDF130300F7B697 /* V_DrawingBoard.m in Sources */,
+				440C36BD1DDB010F008B4AF2 /* V_AdjustContrast.m in Sources */,
+				44C550E41DDDBDBB007BFCBA /* VC_EditPhoto.m in Sources */,
+				440C36BB1DDB010F008B4AF2 /* V_AdjustBrightness.m in Sources */,
 				44B37A3E1DD091F0002DFBD7 /* UIViewController+DismissRoot.m in Sources */,
+				440C36C31DDB010F008B4AF2 /* V_AdjustSaturation.m in Sources */,
 				44B6A4B11DD5CB9000C81558 /* UIView+LayerLine.m in Sources */,
+				44A8834B1DDA9B3400244F20 /* VC_ColorAdjust.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -937,7 +1265,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "a416e35b-b27e-42c5-8b01-86c61370f85d";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -976,7 +1304,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "a416e35b-b27e-42c5-8b01-86c61370f85d";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -989,6 +1317,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SlideDome/GUPImage",
@@ -1006,6 +1335,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yes10cm.SlideDome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a416e35b-b27e-42c5-8b01-86c61370f85d";
 			};
 			name = Debug;
 		};
@@ -1016,6 +1346,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SlideDome/GUPImage",
@@ -1033,6 +1364,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yes10cm.SlideDome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a416e35b-b27e-42c5-8b01-86c61370f85d";
 			};
 			name = Release;
 		};

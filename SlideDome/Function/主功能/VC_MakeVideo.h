@@ -1,5 +1,5 @@
 //
-//  VC_Main.h
+//  VC_MakeVideo.h
 //  SlideDome
 //
 //  Created by ceing on 16/11/8.
@@ -14,14 +14,15 @@
 #import <Photos/PHImageManager.h>
 #import "VC_MuiscList.h"
 #import "VideoBuilder.h"
-#import <AVKit/AVKit.h>
-#import <MediaPlayer/MediaPlayer.h>
 #import "UIImage+Convert.h"
 
 #import "V_RollingTab.h"
 #import <GPUImage/GPUImage.h>
+#import "VC_EditPhoto.h"
+#import "VC_VideoPlayer.h"
+#import "MBProgressHUD.h"
 
-@interface VC_Main : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,V_RollingTabDelegate>
+@interface VC_MakeVideo : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,V_RollingTabDelegate>
 
 @property (nonatomic,retain) NSString *strMusicPath;
 

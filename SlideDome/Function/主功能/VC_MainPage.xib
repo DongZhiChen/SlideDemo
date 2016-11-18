@@ -44,7 +44,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1vq-5h-Aah">
                     <rect key="frame" x="25" y="63" width="271" height="399"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4M-kQ-9db">
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4M-kQ-9db">
                             <rect key="frame" x="114" y="314" width="60" height="60"/>
                             <state key="normal" image="添加图片.png"/>
                         </button>
@@ -90,7 +90,7 @@
                                 <action selector="BTN_Type:" destination="-1" eventType="touchUpInside" id="jXd-NO-JVh"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="100" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfc-OJ-3id">
+                        <button opaque="NO" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfc-OJ-3id">
                             <rect key="frame" x="20" y="20" width="90" height="90"/>
                             <state key="normal" title="H" backgroundImage="白圈.png">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -110,13 +110,13 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.039215686274509803" green="0.039215686274509803" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="1vq-5h-Aah" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="23" id="ROp-ya-fEW"/>
                 <constraint firstItem="1vq-5h-Aah" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ofv-WG-0N8"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="370" y="376"/>
+            <point key="canvasLocation" x="414" y="319"/>
         </view>
         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="r1V-UR-Wq0">
             <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>

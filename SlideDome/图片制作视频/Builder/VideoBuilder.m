@@ -152,7 +152,7 @@
         if (self.writerInput.readyForMoreMediaData) {
             CMTime frameTime = CMTimeMake(0,self.timeScale);
             
-            CMTime lastTime = CMTimeMake(i*5,self.timeScale);
+            CMTime lastTime = CMTimeMake(i*2,self.timeScale);
             
             CMTime presentTime = CMTimeAdd(lastTime, frameTime);
             

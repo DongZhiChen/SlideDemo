@@ -31,43 +31,16 @@ static NSString *CellPreviewID = @"CellPhotoPreview";
     
   [self.BTN_ChoosePhoto bk_addEventHandler:^(id sender) {
       
-      PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
-      if (status == PHAuthorizationStatusRestricted ||
-          status == PHAuthorizationStatusDenied) {
-          
-          UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"Please set permission to access album" preferredStyle:UIAlertControllerStyleAlert];
-          UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"Not allow" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-
-          }];
-          
-          UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-              
-              dispatch_after(0.2, dispatch_get_main_queue(), ^{
-                  
-                   [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
-                  
-              });
-              
-          }];
-          
-          [alert addAction:action1];
-          [alert addAction:action2];
-          [self presentViewController:alert animated:YES completion:nil];
-          
-      }else{
-      
-          VC_PhotoGroup *photoGroup = [[VC_PhotoGroup alloc] init];
-          [self presentViewController:photoGroup animated:YES completion:nil];
-      }
-      
-    
+      [self choosePhoto];
       
   } forControlEvents:UIControlEventTouchUpInside];
+    
     
     [self initData];
     [self initView];
 
 }
+
 
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -77,6 +50,15 @@ static NSString *CellPreviewID = @"CellPhotoPreview";
     [self.navigationController setNavigationBarHidden:YES];
     
 }
+
+
+-(void)viewWillDisappear:(BOOL)animated{
+
+    [super viewWillDisappear:animated];
+    
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
 #pragma mark  - initSet -
 
 -(void)initView{
@@ -86,12 +68,12 @@ static NSString *CellPreviewID = @"CellPhotoPreview";
     self.CV_PhotoList.alwaysBounceHorizontal = YES;
     [self.CV_PhotoList registerNib:[UINib nibWithNibName:@"CellPhotoPreview" bundle:nil] forCellWithReuseIdentifier:CellPreviewID];
     
-    
-    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
-    UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
-    effectView.alpha = 0.8;
-    effectView.frame = [UIScreen mainScreen].bounds;
-    [self.view insertSubview:effectView atIndex:1];
+//    
+//    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+//    UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
+//    effectView.alpha = 0.8;
+//    effectView.frame = [UIScreen mainScreen].bounds;
+//    [self.view insertSubview:effectView atIndex:1];
     
 }
 
@@ -122,7 +104,7 @@ static NSString *CellPreviewID = @"CellPhotoPreview";
 //    
 //    [self.CV_PhotoList reloadData];
     
-    VC_Main *main  = [[VC_Main alloc] init];
+    VC_MakeVideo *main  = [[VC_MakeVideo alloc] init];
     main.arrayPhotos = notiy.object;
     main.strMusicPath = muiscPath;
     [self.navigationController pushViewController:main animated:YES];
@@ -172,17 +154,15 @@ static NSString *CellPreviewID = @"CellPhotoPreview";
 }
 
 
-#pragma mark -
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
+#pragma mark - UIButtonEventClick -
 
 - (IBAction)BTN_Type:(UIButton *)sender {
     
+    if(self.BTN_ChoosePhoto.hidden){
+    
+        self.BTN_ChoosePhoto.hidden = NO;
+    }
     
     UIButton *lastBTN = [self.view viewWithTag:_muiscType+100];
     lastBTN.selected = NO;
@@ -193,8 +173,80 @@ static NSString *CellPreviewID = @"CellPhotoPreview";
     
 }
 
--(void)setMuiscType:(muiscType)muiscType{
 
+
+
+
+
+- (IBAction)BTN_Muisc:(id)sender {
+    
+    VC_MuiscList *muiscList = [[VC_MuiscList alloc] init];
+    [self.navigationController pushViewController:muiscList animated:YES];
+    
+}
+
+- (IBAction)BTN_Preview:(id)sender {
+    
+    
+}
+
+
+-(void)choosePhoto{
+
+    PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
+    
+    if (status == PHAuthorizationStatusRestricted ||
+        status == PHAuthorizationStatusDenied) {
+        
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"Please set permission to access album" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"Not allow" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            
+        }];
+        
+        UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+            dispatch_after(0.2, dispatch_get_main_queue(), ^{
+                
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+                
+            });
+            
+        }];
+        
+        [alert addAction:action1];
+        [alert addAction:action2];
+        [self presentViewController:alert animated:YES completion:nil];
+        
+    }else if(status == PHAuthorizationStatusNotDetermined){
+        
+        [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+            
+            if(status == PHAuthorizationStatusAuthorized){
+                
+                dispatch_sync(dispatch_get_main_queue(), ^{
+                    
+                    VC_PhotoGroup *photoGroup = [[VC_PhotoGroup alloc] init];
+                    [self.navigationController pushViewController:photoGroup animated:YES];
+                    
+                });
+                
+                
+            }
+            
+        }];
+        
+    }else if(status == PHAuthorizationStatusAuthorized){
+        
+        VC_PhotoGroup *photoGroup = [[VC_PhotoGroup alloc] init];
+        [self.navigationController pushViewController:photoGroup animated:YES];
+    }
+    
+}
+
+#pragma mark - setter,getter -
+
+-(void)setMuiscType:(muiscType)muiscType{
+    
     _muiscType = muiscType;
     switch (muiscType) {
         case muiscTypeHappy:{
@@ -222,57 +274,11 @@ static NSString *CellPreviewID = @"CellPhotoPreview";
     }
 }
 
+#pragma mark -
 
--(void)test{
-    
-    NSString *fileNameOut2 = @"output.mp4";
-    _videoPath = [NSString stringWithFormat:@"%@%@", NSTemporaryDirectory(), fileNameOut2];
-    NSLog(@"%@",_videoPath);
-    [[NSFileManager defaultManager] removeItemAtPath:_videoPath  error:NULL];
-    
-    
-    _videoBuilder = [[VideoBuilder alloc]initWithOutputSize:CGSizeMake(640, 360) Timescale:1 OutputPath:_videoPath];
-    
-    NSMutableArray *arrayImages = [NSMutableArray new];
-    
-    for(int i = 0; i < arrayPhotos.count; i++){
-        
-            PHAsset *asset = arrayPhotos[i];
-            
-            PHImageRequestOptions *option = [[PHImageRequestOptions alloc] init];
-            option.synchronous = YES;
-            option.resizeMode = PHImageRequestOptionsResizeModeExact;
-            option.deliveryMode = PHImageRequestOptionsDeliveryModeHighQualityFormat;
-            
-            [[PHCachingImageManager defaultManager] requestImageForAsset:asset targetSize:CGSizeMake(640, 360) contentMode:PHImageContentModeAspectFill options:option resultHandler:^(UIImage * _Nullable image, NSDictionary * _Nullable info) {
-                
-                [arrayImages addObject:image];
-                
-            }];
-    }
-    
-    [_videoBuilder convertVideoWithImageArray:arrayImages];
-    [_videoBuilder maskFinishWithSuccess:^{
-        
-        //[_videoBuilder addAudioToVideoAudioPath:muiscPath];
-        
-    } Fail:^(NSError *error) {
-    }];
-    
-}
-
-
-
-- (IBAction)BTN_Muisc:(id)sender {
-    
-    VC_MuiscList *muiscList = [[VC_MuiscList alloc] init];
-    [self.navigationController pushViewController:muiscList animated:YES];
-    
-}
-
-- (IBAction)BTN_Preview:(id)sender {
-    
-    
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 

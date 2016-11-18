@@ -14,13 +14,19 @@ PODS:
   - BlocksKit/UIKit (2.2.5):
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
+  - Masonry (1.0.1)
+  - MBProgressHUD (0.9.2)
 
 DEPENDENCIES:
-  - BlocksKit
+  - BlocksKit (~> 2.2.5)
+  - Masonry (~> 1.0.1)
+  - MBProgressHUD (~> 0.9.2)
 
 SPEC CHECKSUMS:
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
+  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
 
-PODFILE CHECKSUM: 228b36442c31de25f56a3a5eeeb5e64c2bcf97ec
+PODFILE CHECKSUM: d9c121b4c08a667a567bcbe25965410eccce500e
 
 COCOAPODS: 1.0.1

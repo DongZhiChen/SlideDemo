@@ -35,6 +35,7 @@
 -(void)initSet{
 
     self.clipsToBounds = YES;
+    self.canShowSelectedState = YES;
     _titleFont = [UIFont systemFontOfSize:13];
     _normalColor = [UIColor whiteColor];
     _selectedColor = [UIColor redColor];
@@ -57,7 +58,12 @@
     if(!_isCanRoll){
     
         _tabTitleSize = CGSizeMake(CGRectGetWidth(self.bounds)/_arrayTitles.count, CGRectGetHeight(self.bounds));
+    }else{
+    
+        SV_Tab.contentSize = CGSizeMake(_tabTitleSize.width*_arrayTitles.count, CGRectGetHeight(self.bounds));
+        
     }
+    
     
     for (int i = 0; i < _arrayTitles.count; i++){
         
@@ -70,7 +76,7 @@
         [btn setTitle:_arrayTitles[i] forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(selectedTab:) forControlEvents:UIControlEventTouchUpInside];
         
-        if(i == _selectedIndex){
+        if(i == _selectedIndex && _canShowSelectedState){
             
             btn.selected = YES;
             BTN_Selected = btn;
@@ -132,7 +138,6 @@
     if(isCanRoll){
     
         SV_Tab = [[UIScrollView alloc] initWithFrame:self.bounds];
-        SV_Tab.contentSize = CGSizeMake(_arrayTitles.count*_tabTitleSize.width, CGRectGetHeight(self.bounds));
         SV_Tab.showsHorizontalScrollIndicator = NO;
         [self addSubview:SV_Tab];
         
@@ -148,31 +153,38 @@
 
     NSInteger index = sender.tag - 100;
     
-    if(!sender.isSelected){
-    
-        sender.selected = YES;
+    if(self.canShowSelectedState){
         
-        BTN_Selected.selected = NO;
-        
-        BTN_Selected = sender;
-        
-        if(_isAddIndexLine){
+        if(!sender.isSelected){
             
-            CGRect frame = line.frame;
-            frame.origin.x = _tabTitleSize.width*index;
+            sender.selected = YES;
             
-            [UIView animateWithDuration:0.8 delay:0 usingSpringWithDamping:0.6 initialSpringVelocity:5 options:UIViewAnimationOptionCurveEaseIn animations:^{
+            BTN_Selected.selected = NO;
+            
+            BTN_Selected = sender;
+            
+            if(_isAddIndexLine){
                 
-                line.frame =  frame;
+                CGRect frame = line.frame;
+                frame.origin.x = _tabTitleSize.width*index;
                 
-            } completion:^(BOOL finished) {}];
-            
-            
-            [self.delegate V_RollingTabSelectedIndx:index];
-            
+                [UIView animateWithDuration:0.8 delay:0 usingSpringWithDamping:0.6 initialSpringVelocity:5 options:UIViewAnimationOptionCurveEaseIn animations:^{
+                    
+                    line.frame =  frame;
+                    
+                } completion:^(BOOL finished) {}];
+                
+                
+                [self.delegate V_RollingTabSelectedIndx:index];
+                
+            }
         }
+    }else{
+    
+     [self.delegate V_RollingTabSelectedIndx:index];
+        
     }
-}
+    }
 
 
 #pragma mark - draw -

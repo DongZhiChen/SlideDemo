@@ -25,6 +25,8 @@ static NSString *CellID = @"CellPhotoGroup";
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.title = @"Group";
+    
     arrayGroupInfo = [NSMutableArray new];
     self.view.backgroundColor = [UIColor blackColor];
     
@@ -42,6 +44,8 @@ static NSString *CellID = @"CellPhotoGroup";
     
 }
 
+
+
 -(void)setTB_PhotoGroupList{
 
     TB_PhotoGroupList = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height-20) style:UITableViewStylePlain];
@@ -56,6 +60,7 @@ static NSString *CellID = @"CellPhotoGroup";
 }
 
 
+
 -(void)getAllAssetPhotoAblum{
 
     PHFetchResult *result = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeSmartAlbum subtype:PHAssetCollectionSubtypeAlbumRegular options:nil];
@@ -64,46 +69,24 @@ static NSString *CellID = @"CellPhotoGroup";
         
         PHAssetCollection *collection = (PHAssetCollection *)obj;
         
-    PHFetchResult *result = [PHAsset fetchAssetsInAssetCollection:collection options:nil];
+        if(![collection.localizedTitle isEqualToString:@"Videos"]){
         
-        if(result.count > 0){
-        
-            [arrayGroupInfo addObject:obj];
-
+            PHFetchResult *result = [PHAsset fetchAssetsInAssetCollection:collection options:nil];
+            
+            if(result.count > 0){
+                
+                [arrayGroupInfo addObject:obj];
+                
+            }
+            
         }
+   
     }];
     
     
    
 }
 
-//- (NSString *)transformAblumTitle:(NSString *)title
-//{
-//    if ([title isEqualToString:@"Slo-mo"]) {
-//        return @"慢动作";
-//    } else if ([title isEqualToString:@"Recently Added"]) {
-//        return @"最近添加";
-//    } else if ([title isEqualToString:@"Favorites"]) {
-//        return @"最爱";
-//    } else if ([title isEqualToString:@"Recently Deleted"]) {
-//        return @"最近删除";
-//    } else if ([title isEqualToString:@"Videos"]) {
-//        return @"视频";
-//    } else if ([title isEqualToString:@"All Photos"]) {
-//        return @"所有照片";
-//    } else if ([title isEqualToString:@"Selfies"]) {
-//        return @"自拍";
-//    } else if ([title isEqualToString:@"Screenshots"]) {
-//        return @"屏幕快照";
-//    } else if ([title isEqualToString:@"Camera Roll"]) {
-//        return @"相机胶卷";
-//    }else if([title isEqualToString:@"Panoramas"]){
-//       return @"全景照片";
-//    }else if([title isEqualToString:@"Bursts"]){
-//       return @"连拍";
-//    }
-//    return nil;
-//}
 
 #pragma mark - UITableViewDataSource -
 
@@ -133,7 +116,7 @@ static NSString *CellID = @"CellPhotoGroup";
     cellNew.LB_GroupName.text = collection.localizedTitle;
     
     PHFetchResult *result = [PHAsset fetchAssetsInAssetCollection:collection options:nil];
-    cellNew.LB_Count.text = [NSString stringWithFormat:@"%d pictures",result.count];
+    cellNew.LB_Count.text = [NSString stringWithFormat:@"%d pictures",(int)result.count];
     
     PHAsset *asset =result.lastObject;
     
@@ -150,8 +133,7 @@ static NSString *CellID = @"CellPhotoGroup";
 
     VC_locationPhoto *locationPhoto = [[VC_locationPhoto alloc] init];
    locationPhoto.imageGroup = arrayGroupInfo[indexPath.row];
-    [self presentViewController:locationPhoto animated:YES completion:nil];
-    
+   [self.navigationController pushViewController:locationPhoto animated:YES];
 }
 
 

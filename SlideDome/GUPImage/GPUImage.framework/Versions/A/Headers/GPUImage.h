@@ -49,12 +49,14 @@
 #import "GPUImageSobelEdgeDetectionFilter.h"
 ///素描效果
 #import "GPUImageSketchFilter.h"
-
+ //卡通效果（黑色粗线描边）
 #import "GPUImageToonFilter.h"
+//相比上面的效果更细腻
 #import "GPUImageSmoothToonFilter.h"
 
 ///叠加
 #import "GPUImageMultiplyBlendFilter.h"
+//溶解
 #import "GPUImageDissolveBlendFilter.h"
 
 ///桑原(Kuwahara)滤波,水粉画的模糊效果（没看出效果的？？）； 处理时间长
@@ -68,25 +70,31 @@
 #import "GPUImageGaussianBlurPositionFilter.h"
 ///取消圆形区域的高斯模糊
 #import "GPUImageGaussianSelectiveBlurFilter.h"
-
+///叠加,通常用于创建阴影效果
 #import "GPUImageOverlayBlendFilter.h"
+///加深混合,通常用于重叠类型
 #import "GPUImageDarkenBlendFilter.h"
+///减淡混合,通常用于重叠类型
 #import "GPUImageLightenBlendFilter.h"
 ///水旋涡
 #import "GPUImageSwirlFilter.h"
-
+ //源混合
 #import "GPUImageSourceOverBlendFilter.h"
 ///颜色混合
 #import "GPUImageColorBurnBlendFilter.h"
 ///颜色混合
 #import "GPUImageColorDodgeBlendFilter.h"
-
+ //屏幕包裹,通常用于创建亮点和镜头眩光
 #import "GPUImageScreenBlendFilter.h"
-
+ //排除混合
 #import "GPUImageExclusionBlendFilter.h"
+//差异混合,通常用于创建更多变动的颜色
 #import "GPUImageDifferenceBlendFilter.h"
+//差值混合,通常用于创建两个图像之间的动画变暗模糊效果
 #import "GPUImageSubtractBlendFilter.h"
+ //强光混合,通常用于创建阴影效果
 #import "GPUImageHardLightBlendFilter.h"
+//柔光混合
 #import "GPUImageSoftLightBlendFilter.h"
 #import "GPUImageColorBlendFilter.h"
 #import "GPUImageHueBlendFilter.h"
@@ -98,7 +106,7 @@
 #import "GPUImageGrayscaleFilter.h"
 ///转换，2D,3D
 #import "GPUImageTransformFilter.h"
-
+ //色度键混合
 #import "GPUImageChromaKeyBlendFilter.h"
 ///阴霾效果
 #import "GPUImageHazeFilter.h"
@@ -106,7 +114,7 @@
 #import "GPUImageLuminanceThresholdFilter.h"
 ///色调分离
 #import "GPUImagePosterizeFilter.h"
-
+//盒状模糊
 #import "GPUImageBoxBlurFilter.h"
 ///自适应阈值(真素描)
 #import "GPUImageAdaptiveThresholdFilter.h"
@@ -131,7 +139,9 @@
 
 #import "GPUImageJFAVoronoiFilter.h"
 #import "GPUImageVoronoiConsumerFilter.h"
+ //黑白马赛克
 #import "GPUImageMosaicFilter.h"
+//条纹模糊，中间清晰，上下两端模糊
 #import "GPUImageTiltShiftFilter.h"
 ///使图片变亮变暗吧
 #import "GPUImage3x3ConvolutionFilter.h"
@@ -143,20 +153,26 @@
 #import "GPUImageThresholdEdgeDetectionFilter.h"
 ///蒙版
 #import "GPUImageMaskFilter.h"
-
+//色彩直方图，显示在图片上
 #import "GPUImageHistogramFilter.h"
+//色彩直方图
 #import "GPUImageHistogramGenerator.h"
 #import "GPUImageHistogramEqualizationFilter.h"
 ///预留边缘检测
 #import "GPUImagePrewittEdgeDetectionFilter.h"
+//XYDerivative边缘检测，画面以蓝色为主，绿色为边缘，带彩色
 #import "GPUImageXYDerivativeFilter.h"
+ //Harris角点检测，会有绿色小十字显示在图片角点处
 #import "GPUImageHarrisCornerDetectionFilter.h"
 ///透明混合
 #import "GPUImageAlphaBlendFilter.h"
+ //正常
 #import "GPUImageNormalBlendFilter.h"
+ //非最大抑制，只显示亮度最高的像素，其他为黑
 #import "GPUImageNonMaximumSuppressionFilter.h"
 ///色调
 #import "GPUImageRGBFilter.h"
+ //中间值，有种稍微模糊边缘的效果
 #import "GPUImageMedianFilter.h"
 ///双向模糊
 #import "GPUImageBilateralFilter.h"
@@ -199,6 +215,7 @@
 #import "GPUImageHueFilter.h"
 ///玻璃球
 #import "GPUImageGlassSphereFilter.h"
+//lookup 色彩调整
 #import "GPUImageLookupFilter.h"
 #import "GPUImageAmatorkaFilter.h"
 #import "GPUImageMissEtikateFilter.h"

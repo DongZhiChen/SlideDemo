@@ -2,7 +2,7 @@
 //  VC_VideoPlayer.m
 //  SlideDome
 //
-//  Created by ceing on 16/11/8.
+//  Created by ceing on 16/11/16.
 //  Copyright © 2016年 tcm. All rights reserved.
 //
 
@@ -10,29 +10,47 @@
 
 @interface VC_VideoPlayer ()
 
+@property (nonatomic,strong) LJPlayerView *playerView;
+
 @end
 
 @implementation VC_VideoPlayer
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    // Do any additional setup after loading the view.
+    
+    
+    __weak typeof(self) weakSelf = self;
+    
+    _playerView = [[LJPlayerView alloc] initWithFrame:CGRectMake(0, 0, MainBoundsSize.width, MainBoundsSize.height)];
+    _playerView.videoURL = self.videoPath;
+    _playerView.blockBack = ^{
+    
+        [weakSelf.navigationController popViewControllerAnimated:YES];
+        
+    };
+    
+    [self.view addSubview:_playerView];
+    
+    
 }
 
 
--(void)palyVideo{
 
-//
-//    AVPlayerItem *item = [AVPlayerItem playerItemWithURL:[NSURL fileURLWithPath:_videoPath]];
-//    
-//    
-//    AVPlayer *player = [AVPlayer playerWithPlayerItem:item];
-//    
-//    AVPlayerLayer *playerLayer = [AVPlayerLayer playerLayerWithPlayer:player];
-//    playerLayer.backgroundColor = [UIColor colorWithRed:43.0/255 green:43.0/255 blue:43.0/255 alpha:0.3].CGColor;
-//    playerLayer.frame = self.view.bounds;
-//    [self.view.layer addSublayer:playerLayer];
-//    [player play];
+-(void)viewWillAppear:(BOOL)animated{
+
+    [super viewWillAppear:animated];
+    
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+
+    [super viewWillDisappear:animated];
+    
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
     
 }
 - (void)didReceiveMemoryWarning {
@@ -40,14 +58,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
