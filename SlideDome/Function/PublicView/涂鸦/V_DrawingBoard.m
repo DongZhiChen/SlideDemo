@@ -15,8 +15,6 @@
     //画笔终点
     CGPoint endPoint;
     
-    UIImage *image;
-    
 }
 
 -(id)initWithFrame:(CGRect)frame{
@@ -35,7 +33,7 @@
 
 -(void)drawRect:(CGRect)rect{
 
-[image drawInRect:self.bounds];
+[_imageDoodle drawInRect:self.bounds];
     
 }
 
@@ -44,7 +42,7 @@
 - (void)eraseLine
 {
     UIGraphicsBeginImageContext(self.bounds.size);
-    [image drawInRect:self.bounds];
+    [_imageDoodle drawInRect:self.bounds];
     
     CGContextSetBlendMode(UIGraphicsGetCurrentContext(), kCGBlendModeClear);
     CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
@@ -55,7 +53,7 @@
     CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), endPoint.x, endPoint.y);
     
     CGContextStrokePath(UIGraphicsGetCurrentContext());
-    image = UIGraphicsGetImageFromCurrentImageContext();
+    _imageDoodle = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     startPoint = endPoint;
     
@@ -66,7 +64,7 @@
 - (void)drawLineNew
 {
     UIGraphicsBeginImageContext(self.bounds.size);
-    [image drawInRect:self.bounds];
+    [_imageDoodle drawInRect:self.bounds];
 
     CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
     CGContextSetStrokeColorWithColor(UIGraphicsGetCurrentContext(), [UIColor redColor].CGColor);
@@ -76,7 +74,7 @@
     CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), endPoint.x, endPoint.y);
     
     CGContextStrokePath(UIGraphicsGetCurrentContext());
-    image = UIGraphicsGetImageFromCurrentImageContext();
+    _imageDoodle = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     startPoint = endPoint;
  [self setNeedsDisplay];

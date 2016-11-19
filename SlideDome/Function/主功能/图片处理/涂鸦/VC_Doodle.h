@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "V_DrawingBoard.h"
+#import "UIImage+Convert.h"
 
 @interface VC_Doodle : UIViewController
 

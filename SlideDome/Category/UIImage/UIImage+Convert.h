@@ -17,4 +17,14 @@
 
 +(NSArray *)imageChangeAlphaWithImage:(UIImage *)image;
 +(NSArray *)imageChangeLargerWithImage:(UIImage *)image;
+
+
+/**
+ 图片合成 上下重叠
+
+ @param image1 底图
+ @param image2 上层图
+ @return 合成图片
+ */
++(UIImage *)imageMergeWithImage1:(UIImage *)image1 addImage2:(UIImage *)image2;
 @end

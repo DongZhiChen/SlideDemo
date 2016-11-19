@@ -23,7 +23,14 @@
     
      self.IV_Image.image = self.image;
     
+    [self initView];
+    
+    
 }
+
+
+
+
 
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -34,7 +41,31 @@
     
         [self.view addSubview:self.drawingBoard];
 
+        
     }
+    
+}
+
+
+-(void)viewWillDisappear:(BOOL)animated{
+
+    [super viewWillDisappear:animated];
+    
+    if(_drawingBoard.imageDoodle){
+    
+       self.image = [UIImage imageMergeWithImage1:self.image addImage2:_drawingBoard.imageDoodle];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"editPhotoResultImage" object:self.image];
+        
+    }
+}
+
+
+
+-(void)initView{
+    
+    self.title = @"Doodle";
+    [self.BTN_Eraser addTarget:self action:@selector(BTN_Eraser:) forControlEvents:UIControlEventTouchUpInside];
+    [self.BTN_Pen addTarget:self action:@selector(BTN_Pen:) forControlEvents:UIControlEventTouchUpInside];
     
 }
 
@@ -53,6 +84,21 @@
     
 }
 
+
+#pragma mark - UIButtonEventClick -
+
+-(void)BTN_Eraser:(UIButton *)sender{
+
+    _drawingBoard.DrawingType = DrawingTypeEraser;
+    
+
+}
+
+-(void)BTN_Pen:(UIButton *)sender{
+
+    _drawingBoard.DrawingType = DrawingTypeDrawLine;
+
+}
 
 
 #pragma mark -

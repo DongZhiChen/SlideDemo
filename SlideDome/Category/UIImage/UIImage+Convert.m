@@ -117,5 +117,17 @@
 }
 
 
++(UIImage *)imageMergeWithImage1:(UIImage *)image1 addImage2:(UIImage *)image2{
+
+    UIGraphicsBeginImageContext(image1.size);
+    
+    CGRect frame = CGRectMake(0, 0, image1.size.width, image1.size.height);
+    [image1 drawInRect:frame];
+    [image2 drawInRect:frame];
+    
+    UIImage *resultImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    return resultImage;
+}
 
 @end
