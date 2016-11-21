@@ -33,6 +33,7 @@
     arrayEditTools = @[@"色彩调节",@"效果",@"滤镜",@"涂鸦"];
 }
 
+
 -(void)initView{
 
     self.title = @"Picture";
