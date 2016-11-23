@@ -11,5 +11,6 @@
 
 #import <BlocksKit/BlocksKit+UIKit.h>
 #import "Tools.h"
+#import "UIView+LayerLine.h"
 
 #endif /* SlideDome_Header_pch */

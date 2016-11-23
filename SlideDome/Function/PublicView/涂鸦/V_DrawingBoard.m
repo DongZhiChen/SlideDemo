@@ -15,8 +15,6 @@
     //画笔终点
     CGPoint endPoint;
     
-    UIImage *image;
-    
 }
 
 -(id)initWithFrame:(CGRect)frame{
@@ -35,7 +33,9 @@
 
 -(void)drawRect:(CGRect)rect{
 
-[image drawInRect:self.bounds];
+    [super drawRect:rect];
+    
+    [_imageDoodle drawInRect:rect];
     
 }
 
@@ -44,7 +44,7 @@
 - (void)eraseLine
 {
     UIGraphicsBeginImageContext(self.bounds.size);
-    [image drawInRect:self.bounds];
+    [_imageDoodle drawInRect:self.bounds];
     
     CGContextSetBlendMode(UIGraphicsGetCurrentContext(), kCGBlendModeClear);
     CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
@@ -55,7 +55,7 @@
     CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), endPoint.x, endPoint.y);
     
     CGContextStrokePath(UIGraphicsGetCurrentContext());
-    image = UIGraphicsGetImageFromCurrentImageContext();
+    _imageDoodle = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     startPoint = endPoint;
     
@@ -66,17 +66,17 @@
 - (void)drawLineNew
 {
     UIGraphicsBeginImageContext(self.bounds.size);
-    [image drawInRect:self.bounds];
+    [_imageDoodle drawInRect:self.bounds];
 
     CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
     CGContextSetStrokeColorWithColor(UIGraphicsGetCurrentContext(), [UIColor redColor].CGColor);
-    CGContextSetLineWidth(UIGraphicsGetCurrentContext(), 10);
+    CGContextSetLineWidth(UIGraphicsGetCurrentContext(), 5);
     CGContextBeginPath(UIGraphicsGetCurrentContext());
     CGContextMoveToPoint(UIGraphicsGetCurrentContext(), startPoint.x, startPoint.y);
     CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), endPoint.x, endPoint.y);
     
     CGContextStrokePath(UIGraphicsGetCurrentContext());
-    image = UIGraphicsGetImageFromCurrentImageContext();
+    _imageDoodle = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     startPoint = endPoint;
  [self setNeedsDisplay];
@@ -112,7 +112,7 @@
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
-    UITouch *touch = touches.allObjects[0];
+    UITouch *touch = touches.anyObject;
     
     startPoint = [touch locationInView:self];
     endPoint = startPoint;
@@ -124,7 +124,7 @@
 
 -(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
-    UITouch *touch = touches.allObjects[0];
+    UITouch *touch = touches.anyObject;
     endPoint = [touch locationInView:self];
     
    [self touchDrawing];

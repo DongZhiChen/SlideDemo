@@ -31,6 +31,16 @@
 -(void)initData{
 
     arrayEditTools = @[@"色彩调节",@"效果",@"滤镜",@"涂鸦"];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(editPhotoResultImage:) name:@"editPhotoResultImage" object:nil];
+    
+}
+
+-(void)editPhotoResultImage:(NSNotification *)notiy{
+
+    self.image = (UIImage *)notiy.object;
+    self.IV_Image.image = self.image;
+    
 }
 
 

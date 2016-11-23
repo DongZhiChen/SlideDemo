@@ -36,8 +36,6 @@ static void *strLayerHeight = &strLayerHeight;
     if(self.layer.borderWidth == 0)
     self.layer.borderColor = [UIColor colorWithRed:129.0/255 green:129.0/255 blue:129.0/255 alpha:0.3].CGColor;
     
-
-    
     CGSize mainSize = self.frame.size;
     
     CGFloat layerHeight = self.layerHeight;
@@ -69,7 +67,7 @@ static void *strLayerHeight = &strLayerHeight;
     self.layer.borderWidth = 0;
     
     NSNumber *number = [NSNumber numberWithInteger:layerLineType];
-    objc_setAssociatedObject(self, &strLayerLineType, number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, &strLayerLineType, number, OBJC_ASSOCIATION_RETAIN);
     
 }
 

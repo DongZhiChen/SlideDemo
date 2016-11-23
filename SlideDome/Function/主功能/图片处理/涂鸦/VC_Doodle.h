@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 #import "V_DrawingBoard.h"
+#import "UIImage+Convert.h"
+#import "UIImage+WaterMark.h"
+#import "V_DoodleEditWords.h"
 
 @interface VC_Doodle : UIViewController
 
@@ -20,5 +23,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *IV_Image;
 @property (weak, nonatomic) IBOutlet UIButton *BTN_Eraser;
 @property (weak, nonatomic) IBOutlet UIButton *BTN_Pen;
+- (IBAction)BTN_addWords:(id)sender;
 
 @end

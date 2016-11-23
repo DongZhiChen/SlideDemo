@@ -14,7 +14,22 @@
 +(UIImage *)imageMergeWithImages:(NSArray *)images;
 
 +(UIImage *)imageClipWithImage:(UIImage *)image;
-
++(UIImage *)imageClipAspectFitWithImage:(UIImage *)image addClipSize:(CGSize)clipSize;
 +(NSArray *)imageChangeAlphaWithImage:(UIImage *)image;
 +(NSArray *)imageChangeLargerWithImage:(UIImage *)image;
+
+
+
+-(CGSize)imageAspectFitSizeContainerSize:(CGSize)containerSize;
+
+-(CGRect)imageConvertFrameWithFrame:(CGRect)frame addReferFrame:(CGSize)referSize;
+/**
+ 图片合成 上下重叠
+
+ @param image1 底图
+ @param image2 上层图
+ @return 合成图片
+ */
++(UIImage *)imageMergeWithImage1:(UIImage *)image1 addImage2:(UIImage *)image2;
+
 @end

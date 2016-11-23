@@ -66,6 +66,8 @@
 		44B37A401DD09935002DFBD7 /* 添加图片.png in Resources */ = {isa = PBXBuildFile; fileRef = 44B37A3F1DD09935002DFBD7 /* 添加图片.png */; };
 		44B6A4A91DD5C9D900C81558 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B6A4A81DD5C9D900C81558 /* GPUImage.framework */; };
 		44B6A4B11DD5CB9000C81558 /* UIView+LayerLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B6A4B01DD5CB9000C81558 /* UIView+LayerLine.m */; };
+		44B809641DE2881C005A3B70 /* UIImage+WaterMark.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B809631DE2881C005A3B70 /* UIImage+WaterMark.m */; };
+		44B809691DE2AAEA005A3B70 /* V_DoodleEditWords.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B809681DE2AAEA005A3B70 /* V_DoodleEditWords.m */; };
 		44C550E41DDDBDBB007BFCBA /* VC_EditPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C550E21DDDBDBB007BFCBA /* VC_EditPhoto.m */; };
 		44C550E51DDDBDBB007BFCBA /* VC_EditPhoto.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44C550E31DDDBDBB007BFCBA /* VC_EditPhoto.xib */; };
 		44CBF9971DCC6DBD00D99707 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44CBF9961DCC6DBD00D99707 /* main.m */; };
@@ -199,6 +201,10 @@
 		44B6A4A81DD5C9D900C81558 /* GPUImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GPUImage.framework; sourceTree = "<group>"; };
 		44B6A4AF1DD5CB9000C81558 /* UIView+LayerLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LayerLine.h"; sourceTree = "<group>"; };
 		44B6A4B01DD5CB9000C81558 /* UIView+LayerLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LayerLine.m"; sourceTree = "<group>"; };
+		44B809621DE2881C005A3B70 /* UIImage+WaterMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WaterMark.h"; sourceTree = "<group>"; };
+		44B809631DE2881C005A3B70 /* UIImage+WaterMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WaterMark.m"; sourceTree = "<group>"; };
+		44B809671DE2AAEA005A3B70 /* V_DoodleEditWords.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = V_DoodleEditWords.h; path = "Function/主功能/图片处理/Views/涂鸦/添加文字/V_DoodleEditWords.h"; sourceTree = "<group>"; };
+		44B809681DE2AAEA005A3B70 /* V_DoodleEditWords.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = V_DoodleEditWords.m; path = "Function/主功能/图片处理/Views/涂鸦/添加文字/V_DoodleEditWords.m"; sourceTree = "<group>"; };
 		44BE483D69B5031EF96BC180 /* Pods-SlideDome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideDome.release.xcconfig"; path = "Pods/Target Support Files/Pods-SlideDome/Pods-SlideDome.release.xcconfig"; sourceTree = "<group>"; };
 		44C550E11DDDBDBB007BFCBA /* VC_EditPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VC_EditPhoto.h; path = "Function/主功能/VC_EditPhoto.h"; sourceTree = "<group>"; };
 		44C550E21DDDBDBB007BFCBA /* VC_EditPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VC_EditPhoto.m; path = "Function/主功能/VC_EditPhoto.m"; sourceTree = "<group>"; };
@@ -470,6 +476,7 @@
 		44A883591DDAA4CD00244F20 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				44B809651DE2AA81005A3B70 /* 涂鸦 */,
 				440C36A01DDB010F008B4AF2 /* 色彩调节 */,
 				440C369F1DDB00DB008B4AF2 /* 滤镜调节 */,
 			);
@@ -669,6 +676,23 @@
 				44B6A4B01DD5CB9000C81558 /* UIView+LayerLine.m */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		44B809651DE2AA81005A3B70 /* 涂鸦 */ = {
+			isa = PBXGroup;
+			children = (
+				44B809661DE2AA8E005A3B70 /* 编辑文字 */,
+			);
+			name = "涂鸦";
+			sourceTree = "<group>";
+		};
+		44B809661DE2AA8E005A3B70 /* 编辑文字 */ = {
+			isa = PBXGroup;
+			children = (
+				44B809671DE2AAEA005A3B70 /* V_DoodleEditWords.h */,
+				44B809681DE2AAEA005A3B70 /* V_DoodleEditWords.m */,
+			);
+			name = "编辑文字";
 			sourceTree = "<group>";
 		};
 		44CBF9891DCC6DBD00D99707 = {
@@ -909,6 +933,8 @@
 		F245170C1DCF1643003275C9 /* UIImage */ = {
 			isa = PBXGroup;
 			children = (
+				44B809621DE2881C005A3B70 /* UIImage+WaterMark.h */,
+				44B809631DE2881C005A3B70 /* UIImage+WaterMark.m */,
 				F245170D1DCF1643003275C9 /* UIImage+Convert.h */,
 				F245170E1DCF1643003275C9 /* UIImage+Convert.m */,
 			);
@@ -1152,6 +1178,7 @@
 				44F7E72E1DDC1AA100220DC0 /* V_RollingTab.m in Sources */,
 				44CBFA321DCC792D00D99707 /* VC_PhotoGroup.m in Sources */,
 				44ABEFFE1DD15CF900B031A3 /* VC_MuiscList.m in Sources */,
+				44B809641DE2881C005A3B70 /* UIImage+WaterMark.m in Sources */,
 				44CBFA3A1DCC7B8300D99707 /* CellPhotoGroup.m in Sources */,
 				44CBFA101DCC751F00D99707 /* CellLocationPhoto.m in Sources */,
 				44F7E7361DDC297E00220DC0 /* LJPlayerControlView.m in Sources */,
@@ -1174,6 +1201,7 @@
 				440C36BD1DDB010F008B4AF2 /* V_AdjustContrast.m in Sources */,
 				44C550E41DDDBDBB007BFCBA /* VC_EditPhoto.m in Sources */,
 				440C36BB1DDB010F008B4AF2 /* V_AdjustBrightness.m in Sources */,
+				44B809691DE2AAEA005A3B70 /* V_DoodleEditWords.m in Sources */,
 				44B37A3E1DD091F0002DFBD7 /* UIViewController+DismissRoot.m in Sources */,
 				440C36C31DDB010F008B4AF2 /* V_AdjustSaturation.m in Sources */,
 				44B6A4B11DD5CB9000C81558 /* UIView+LayerLine.m in Sources */,
@@ -1265,7 +1293,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "a416e35b-b27e-42c5-8b01-86c61370f85d";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1304,7 +1332,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "a416e35b-b27e-42c5-8b01-86c61370f85d";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1335,7 +1363,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yes10cm.SlideDome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a416e35b-b27e-42c5-8b01-86c61370f85d";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1364,7 +1392,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yes10cm.SlideDome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a416e35b-b27e-42c5-8b01-86c61370f85d";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

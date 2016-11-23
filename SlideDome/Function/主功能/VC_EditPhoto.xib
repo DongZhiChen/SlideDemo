@@ -28,7 +28,7 @@
                 <constraint firstItem="AdX-Z1-Rbg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nu6-38-B76"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-            <point key="canvasLocation" x="278" y="276"/>
+            <point key="canvasLocation" x="23" y="174"/>
         </view>
     </objects>
 </document>

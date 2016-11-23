@@ -79,6 +79,89 @@
 }
 
 
+
+-(CGRect)imageConvertFrameWithFrame:(CGRect)frame addReferFrame:(CGSize)referSize{
+
+    CGFloat x = frame.origin.x;
+    x = x*self.size.width/referSize.width;
+   
+    CGFloat y = frame.origin.y;
+    y = y*self.size.height/referSize.height;
+    
+    CGFloat w = frame.size.width;
+    w = w*self.size.width/referSize.width;
+    
+    CGFloat h = frame.size.height;
+    h = h*self.size.height/referSize.height;
+
+    return CGRectMake(x, y, w, h);
+    
+}
+-(CGSize)imageAspectFitSizeContainerSize:(CGSize)containerSize{
+
+    CGFloat imageWHScale = self.size.width/self.size.height;
+    CGFloat clipSizeScale = containerSize.width/containerSize.height;
+    CGSize newSize;
+    CGFloat w;
+    CGFloat h;
+    
+    if(imageWHScale > clipSizeScale){///以宽为最大值
+        
+        w = containerSize.width;
+        
+        h = self.size.height*w/self.size.width;
+        
+        
+    }else{
+        
+        h = containerSize.height;
+        
+        w = self.size.width*h/self.size.height;
+        
+    }
+    
+    newSize = CGSizeMake(w, h);
+    
+    return newSize;
+}
+
++(UIImage *)imageClipAspectFitWithImage:(UIImage *)image addClipSize:(CGSize)clipSize{
+
+    CGFloat imageWHScale = image.size.width/image.size.height;
+    CGFloat clipSizeScale = clipSize.width/clipSize.height;
+    CGSize newSize;
+    CGFloat w;
+    CGFloat h;
+    
+    if(imageWHScale > clipSizeScale){///以宽为最大值
+    
+         w = clipSize.width;
+        
+         h = image.size.height*w/image.size.width;
+        
+        
+    }else{
+        
+        h = clipSize.height;
+        
+        w = image.size.width*h/image.size.height;
+    
+    }
+    
+    newSize = CGSizeMake(w, h);
+    
+    UIGraphicsBeginImageContext(newSize);
+    
+    [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *resultingImage =UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return resultingImage;
+
+}
+
+
 +(NSArray *)imageChangeAlphaWithImage:(UIImage *)image{
     
 //    UIGraphicsBeginImageContext(VedioSize);
@@ -117,5 +200,17 @@
 }
 
 
++(UIImage *)imageMergeWithImage1:(UIImage *)image1 addImage2:(UIImage *)image2{
+
+    UIGraphicsBeginImageContext(image1.size);
+    
+    CGRect frame = CGRectMake(0, 0, image1.size.width, image1.size.height);
+    [image1 drawInRect:frame];
+    [image2 drawInRect:frame];
+    
+    UIImage *resultImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    return resultImage;
+}
 
 @end

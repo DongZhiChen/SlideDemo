@@ -27,6 +27,9 @@ typedef NS_ENUM(NSInteger,DrawingType){
 @property (assign, nonatomic) DrawingType DrawingType;
 
 
-
+/**
+ * 涂鸦层 的图片
+ */
+@property (retain, readonly, nonatomic) UIImage *imageDoodle;
 
 @end
